@@ -1,0 +1,5 @@
+platform:ios, '8.0'
+target 'guwangyule' do
+pod 'WechatOpenSDK'
+pod 'MBProgressHUD', '~>1.0.0’
+end
