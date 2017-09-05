@@ -18,10 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[WeChatManager shareInterface] sendAuthRequest];;
 }
 - (IBAction)weChatLoginClick:(UIButton *)sender {
-    
+    [[WeChatManager shareInterface] sendAuthRequest];
 }
 
 

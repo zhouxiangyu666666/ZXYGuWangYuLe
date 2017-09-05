@@ -9,9 +9,11 @@
 #import "MainViewController.h"
 
 @interface MainViewController ()
-@property (nonatomic,strong)UILabel *noticeLabel;
-@property (nonatomic,strong)UIImageView *lightImageView;
+
+@property (strong, nonatomic) IBOutlet UILabel *noticeLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *lightImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *horseLamp;
+@property (strong, nonatomic) IBOutlet UIImageView *topLightImageView;
 
 @end
 
@@ -19,26 +21,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setMyNoticeLabel];
-    [self setLight];
+    [self anmationForNoticeLabel];
+    [self anmationForLight];
 }
--(void)setLight
-{
 
-    
-}
--(void)setMyNoticeLabel
-{
-    self.noticeLabel=[[UILabel alloc]initWithFrame:CGRectMake(0, 0,440,21)];
-    self.noticeLabel.font=[UIFont systemFontOfSize:14];
-    self.noticeLabel.center = CGPointMake(self.horseLamp.frame.size.width+self.noticeLabel.frame.size.width/2, self.horseLamp.frame.size.height/2);
-    self.noticeLabel.text=@"[股王娱乐]:代理咨询微信:shaiwangdongniu,请大家文明游戏,禁止赌博";
-    self.noticeLabel.textColor=[UIColor whiteColor];
+-(void)anmationForNoticeLabel{
     self.horseLamp.clipsToBounds=YES;
     [self.horseLamp addSubview:self.noticeLabel];
-    [self anmationForNoticeLabel];
-}
--(void)anmationForNoticeLabel{
     self.noticeLabel.center = CGPointMake(self.horseLamp.frame.size.width+self.noticeLabel.frame.size.width/2, self.horseLamp.frame.size.height/2);
     [UIView animateWithDuration:10 animations:^{
         self.noticeLabel.center = CGPointMake(-self.noticeLabel.frame.size.width/2, self.horseLamp.frame.size.height/2);
@@ -47,7 +36,19 @@
             [self anmationForNoticeLabel];
         }
     }];
-    
+}
+-(void)anmationForLight{
+    self.lightImageView.center=CGPointMake(self.lightImageView.frame.size.width/2+self.view.frame.size.width,self.horseLamp.frame.origin.y-4);
+    self.topLightImageView.center=CGPointMake(-self.topLightImageView.frame.size.width, self.view.frame.size.height-50);
+    [UIView animateWithDuration:5 animations:^{
+        self.lightImageView.center=CGPointMake(-self.lightImageView.frame.size.width/2,self.horseLamp.frame.origin.y-4);
+        self.topLightImageView.center=CGPointMake(self.lightImageView.frame.size.width/2+self.view.frame.size.width,self.view.frame.size.height-25);
+    } completion:^(BOOL finished) {
+        if (finished) {
+            [self anmationForLight];
+        }
+    }];
+
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

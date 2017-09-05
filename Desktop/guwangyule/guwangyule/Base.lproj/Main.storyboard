@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PNW-cc-YEf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -212,6 +212,21 @@
                                     <constraint firstAttribute="width" constant="500" id="phk-nJ-mL1"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[股王娱乐]:代理咨询微信:shaiwangdongniu,请大家文明游戏,禁止赌博" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhW-vc-s53">
+                                <rect key="frame" x="169" y="67" width="445" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="guangxiao" translatesAutoresizingMaskIntoConstraints="NO" id="4ci-RP-o58">
+                                <rect key="frame" x="426" y="57" width="150" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="guangxiao" translatesAutoresizingMaskIntoConstraints="NO" id="6wA-aP-oCP">
+                                <rect key="frame" x="316" y="322" width="150" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -275,6 +290,9 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="horseLamp" destination="IQy-i2-eei" id="EtU-jR-SiR"/>
+                        <outlet property="lightImageView" destination="4ci-RP-o58" id="6gf-A5-duv"/>
+                        <outlet property="noticeLabel" destination="rhW-vc-s53" id="xzh-Gx-SdY"/>
+                        <outlet property="topLightImageView" destination="6wA-aP-oCP" id="IxP-ZH-tJr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gIB-mH-AMw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -289,6 +307,7 @@
         <image name="cjfj" width="174" height="75"/>
         <image name="gg" width="25" height="73"/>
         <image name="ggbj" width="163" height="199"/>
+        <image name="guangxiao" width="661" height="38"/>
         <image name="jb" width="24" height="23"/>
         <image name="jrfj" width="167" height="76"/>
         <image name="kuang" width="125" height="26"/>

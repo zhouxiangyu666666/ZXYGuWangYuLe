@@ -9,6 +9,6 @@
 #ifndef ApiManager_h
 #define ApiManager_h
 
-#define weChatLogin @"http://119.29.1.15:8080/web-ssm/user/login"
+#define weChatLogin @"http://47.94.225.154:8080/web-ssm/user/login"
 
 #endif /* ApiManager_h */
