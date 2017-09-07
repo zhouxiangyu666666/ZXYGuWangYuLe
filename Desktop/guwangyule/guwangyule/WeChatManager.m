@@ -4,7 +4,7 @@
 //
 //  Created by Jeremy on 2017/8/31.
 //  Copyright © 2017年 Macx. All rights reserved.
-//https://itunes.apple.com/cn/app/wei-xin/id414478124?mt=8
+
 
 #import "WeChatManager.h"
 #import "ApiManager.h"
@@ -38,8 +38,10 @@
 -(void) onResp:(SendAuthResp*)resp{
     if (resp.errCode==0) {
         NSString *param = [NSString stringWithFormat:@"code=%@&phone=0",resp.code];
-        [[DownLoadManager shareInterface] postddByByUrlPath:weChatLogin andParams:param andHUD:nil andCallBack:^(id obj) {
+        [[DownLoadManager shareInterface] postddByByUrlPath:weChatLogin_api andParams:param andHUD:nil andCallBack:^(id obj) {
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"turnToMainVC" object:nil];
             NSLog(@"%@",obj);
+            
         }];
     }
 }

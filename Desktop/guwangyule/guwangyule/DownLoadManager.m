@@ -1,10 +1,11 @@
 //
-//  DownLoad.m
-//  laibaApp
+//  DownLoadManager.m
+//  guwangyule
 //
-//  Created by 北京正途信息科技有限公司 on 16/3/11.
-//  Copyright © 2016年 北京正途信息科技有限公司. All rights reserved.
-//
+//  Created by Jeremy on 2017/8/31.
+//  Copyright © 2017年 Macx. All rights reserved.
+
+
 #import "DownLoadManager.h"
 @implementation DownLoadManager
 +(DownLoadManager*)shareInterface

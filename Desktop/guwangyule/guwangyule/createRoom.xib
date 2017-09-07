@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="createRoom">
+            <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cjian" translatesAutoresizingMaskIntoConstraints="NO" id="Pyf-Um-wBm">
+                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="创建房间需花费10个钻石" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Nz-dr-TSm">
+                    <rect key="frame" x="204.5" y="174" width="258" height="27.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zuans" translatesAutoresizingMaskIntoConstraints="NO" id="tFT-IQ-CkF">
+                    <rect key="frame" x="470" y="174" width="30" height="27.5"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ItP-KW-lAs">
+                    <rect key="frame" x="120" y="255" width="111" height="46"/>
+                    <state key="normal" image="qx"/>
+                    <connections>
+                        <action selector="cancel:" destination="iN0-l3-epB" eventType="touchUpInside" id="htk-UR-iSs"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZ1-Zu-Gr7">
+                    <rect key="frame" x="436" y="255" width="111" height="46"/>
+                    <state key="normal" image="qd"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="certain:" destination="iN0-l3-epB" eventType="touchUpInside" id="iun-sC-R6b"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="tFT-IQ-CkF" firstAttribute="top" secondItem="5Nz-dr-TSm" secondAttribute="top" id="1Hh-e7-Sbi"/>
+                <constraint firstAttribute="bottom" secondItem="Pyf-Um-wBm" secondAttribute="bottom" id="3rg-0D-44g"/>
+                <constraint firstItem="ItP-KW-lAs" firstAttribute="top" secondItem="Pyf-Um-wBm" secondAttribute="bottom" multiplier="255/375" id="71Z-Wf-Wtn"/>
+                <constraint firstItem="Pyf-Um-wBm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="946-gQ-xQn"/>
+                <constraint firstItem="tFT-IQ-CkF" firstAttribute="bottom" secondItem="5Nz-dr-TSm" secondAttribute="bottom" id="C8R-uF-sLT"/>
+                <constraint firstItem="QZ1-Zu-Gr7" firstAttribute="top" secondItem="ItP-KW-lAs" secondAttribute="top" id="IwM-l2-gb7"/>
+                <constraint firstItem="Pyf-Um-wBm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Nmv-6m-Q11"/>
+                <constraint firstItem="5Nz-dr-TSm" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="PMY-F2-krA"/>
+                <constraint firstItem="tFT-IQ-CkF" firstAttribute="leading" secondItem="5Nz-dr-TSm" secondAttribute="trailing" constant="7.5" id="agI-D7-Rdj"/>
+                <constraint firstItem="5Nz-dr-TSm" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="oR6-bd-iHH"/>
+                <constraint firstItem="QZ1-Zu-Gr7" firstAttribute="trailing" secondItem="Pyf-Um-wBm" secondAttribute="trailing" multiplier="547/667" id="pFU-l1-Bg2"/>
+                <constraint firstItem="ItP-KW-lAs" firstAttribute="leading" secondItem="Pyf-Um-wBm" secondAttribute="trailing" multiplier="120/667" id="vyE-5O-wzN"/>
+                <constraint firstAttribute="trailing" secondItem="Pyf-Um-wBm" secondAttribute="trailing" id="wxZ-6x-TtR"/>
+            </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="20"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cjian" width="481" height="284"/>
+        <image name="qd" width="111" height="46"/>
+        <image name="qx" width="111" height="46"/>
+        <image name="zuans" width="30" height="23"/>
+    </resources>
+</document>

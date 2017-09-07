@@ -1,15 +1,20 @@
 PODS:
   - MBProgressHUD (1.0.0)
+  - SDWebImage (4.1.0):
+    - SDWebImage/Core (= 4.1.0)
+  - SDWebImage/Core (4.1.0)
   - WechatOpenSDK (1.8.0)
 
 DEPENDENCIES:
   - MBProgressHUD (~> 1.0.0)
+  - SDWebImage (~> 4.1.0)
   - WechatOpenSDK
 
 SPEC CHECKSUMS:
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
   WechatOpenSDK: 0ee07a8d492299d3e47372a33da5af26524a7576
 
-PODFILE CHECKSUM: 49909f41d042e1b01bbcf6e22f8389352005eeb0
+PODFILE CHECKSUM: 2319129d606b4dbcc86f20cf0c4a04e22d75b37b
 
 COCOAPODS: 1.3.1

@@ -17,13 +17,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(turnToMainVC) name:@"turnToMainVC" object:nil];
     
 }
 - (IBAction)weChatLoginClick:(UIButton *)sender {
     [[WeChatManager shareInterface] sendAuthRequest];
 }
-
-
+-(void)turnToMainVC
+{
+    [self performSegueWithIdentifier:@"turnToMainVC" sender:self];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

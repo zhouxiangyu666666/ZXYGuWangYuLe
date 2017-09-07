@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="buyDiamond">
+            <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ts" translatesAutoresizingMaskIntoConstraints="NO" id="a27-4P-Zwo">
+                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="充值钻石请联系客服微信:666" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KI5-ZG-Hrk">
+                    <rect key="frame" x="182" y="174.5" width="305" height="27.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdS-zA-IXP">
+                    <rect key="frame" x="265" y="229.5" width="137" height="45"/>
+                    <state key="normal" image="wzdl"/>
+                    <connections>
+                        <action selector="Iknow:" destination="iN0-l3-epB" eventType="touchUpInside" id="naf-lC-OeB"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="a27-4P-Zwo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0hK-43-HAK"/>
+                <constraint firstItem="a27-4P-Zwo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0m5-uh-YbP"/>
+                <constraint firstItem="vdS-zA-IXP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="IJm-qC-yxZ"/>
+                <constraint firstAttribute="bottom" secondItem="a27-4P-Zwo" secondAttribute="bottom" id="ITK-hc-tzX"/>
+                <constraint firstAttribute="trailing" secondItem="a27-4P-Zwo" secondAttribute="trailing" id="KU1-Qo-akg"/>
+                <constraint firstItem="vdS-zA-IXP" firstAttribute="top" secondItem="KI5-ZG-Hrk" secondAttribute="bottom" constant="27.5" id="MgX-bX-qAL"/>
+                <constraint firstItem="KI5-ZG-Hrk" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="emw-HA-LqM"/>
+                <constraint firstItem="KI5-ZG-Hrk" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="yNm-Eu-2cr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="20"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ts" width="425" height="251"/>
+        <image name="wzdl" width="137" height="45"/>
+    </resources>
+</document>
