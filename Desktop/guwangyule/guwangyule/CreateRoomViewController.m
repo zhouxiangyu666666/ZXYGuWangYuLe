@@ -8,7 +8,7 @@
 
 #import "CreateRoomViewController.h"
 #import "buyGold.h"
-#import "createRoomInfoManager.h"
+#import "ModelManager.h"
 #import <UIImageView+WebCache.h>
 @interface CreateRoomViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *roomNumber;
@@ -24,12 +24,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _roomNumber.text=[NSString stringWithFormat:@"房间号:%@",[createRoomInfoManager shareInterface].roomId];
-    _stakeNumber.text=[NSString stringWithFormat:@"%@",[createRoomInfoManager shareInterface].goldcount];
-    _RoomHostName.text=[NSString stringWithFormat:@"%@",[createRoomInfoManager shareInterface].name];
-    _RoomHostID.text=[NSString stringWithFormat:@"%@",[createRoomInfoManager shareInterface].userid];
-    [_RoomHostHeader sd_setImageWithURL:[NSURL URLWithString:[createRoomInfoManager shareInterface].logo]placeholderImage:[UIImage imageNamed:@"fz"]];
     
+    _roomNumber.text=[NSString stringWithFormat:@"房间号:%@",[ModelManager shareInterface].createRoomInfoModel.roomId];
+    _stakeNumber.text=[NSString stringWithFormat:@"%@",[ModelManager shareInterface].createRoomInfoModel.goldCount];
+    _RoomHostName.text=[NSString stringWithFormat:@"%@",[ModelManager shareInterface].createRoomInfoModel.userName];
+    _RoomHostID.text=[NSString stringWithFormat:@"%@",[ModelManager shareInterface].createRoomInfoModel.userId];
+    [_RoomHostHeader sd_setImageWithURL:[NSURL URLWithString:[ModelManager shareInterface].createRoomInfoModel.userLogo]placeholderImage:[UIImage imageNamed:@"fz"]];
 }
 - (IBAction)startGame:(UIButton *)sender {
     

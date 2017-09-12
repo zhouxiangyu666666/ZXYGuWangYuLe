@@ -7,11 +7,13 @@
 //
 
 #import "MainViewController.h"
+#import "ModelManager.h"
 #import "buyGold.h"
 #import "buyDiamond.h"
 #import "createRoom.h"
 #import "EnterRoom.h"
 #import "quitRoom.h"
+#import <UIImageView+WebCache.h>
 @interface MainViewController ()
 
 @property (strong, nonatomic) IBOutlet UILabel *noticeLabel;
@@ -20,6 +22,9 @@
 @property (strong, nonatomic) IBOutlet UIImageView *topLightImageView;
 @property (strong, nonatomic) IBOutlet UILabel *diamondLabel;
 @property (strong, nonatomic) IBOutlet UILabel *goldLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *headerImageView;
+@property (strong, nonatomic) IBOutlet UILabel *userNameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *userIdLabel;
 
 @end
 
@@ -27,11 +32,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setUserInfo];
     [self anmationForNoticeLabel];
     [self anmationForLight];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(turnToCreateRoomVC) name:@"createRoom" object:nil];
 }
-
+-(void)setUserInfo
+{
+    _userNameLabel.text=[ModelManager shareInterface].loginInfoModel.userName;
+    _userIdLabel.text=[NSString stringWithFormat:@"%@",[ModelManager shareInterface].loginInfoModel.userId];
+    _diamondLabel.text=[NSString stringWithFormat:@"%@",[ModelManager shareInterface].loginInfoModel.diamondCount];
+    _goldLabel.text=[NSString stringWithFormat:@"%@",[ModelManager shareInterface].loginInfoModel.goldCount];
+    [_headerImageView sd_setImageWithURL:[NSURL URLWithString:[ModelManager shareInterface].loginInfoModel.userLogo]];
+}
 -(void)anmationForNoticeLabel{
     self.horseLamp.clipsToBounds=YES;
     [self.horseLamp addSubview:self.noticeLabel];

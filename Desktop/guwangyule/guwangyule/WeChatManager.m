@@ -9,7 +9,8 @@
 #import "WeChatManager.h"
 #import "ApiManager.h"
 #import "DownLoadManager.h"
-#import "ApiManager.h"
+#import "ModelManager.h"
+#import "LoginInfo.h"
 @implementation WeChatManager
 +(WeChatManager*)shareInterface
 {
@@ -39,8 +40,9 @@
     if (resp.errCode==0) {
         NSString *param = [NSString stringWithFormat:@"code=%@&phone=0",resp.code];
         [[DownLoadManager shareInterface] postddByByUrlPath:weChatLogin_api andParams:param andHUD:nil andCallBack:^(id obj) {
+            [ModelManager shareInterface].loginInfoModel=[[LoginInfo alloc]init];
+            [[ModelManager shareInterface].loginInfoModel setValuesForKeysWithDictionary:[obj objectForKey:@"result"]];
             [[NSNotificationCenter defaultCenter]postNotificationName:@"turnToMainVC" object:nil];
-            NSLog(@"%@",obj);
             
         }];
     }

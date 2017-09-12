@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3F030F1E1F5FE3210099463B /* CreateRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F030F1D1F5FE3210099463B /* CreateRoomViewController.m */; };
-		3F030F271F5FF4B20099463B /* createRoomInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F030F261F5FF4B20099463B /* createRoomInfoManager.m */; };
 		3F46EA8C1F57A34A006BF59A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F46EA8B1F57A34A006BF59A /* main.m */; };
 		3F46EA8F1F57A34A006BF59A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F46EA8E1F57A34A006BF59A /* AppDelegate.m */; };
 		3F46EA921F57A34A006BF59A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F46EA911F57A34A006BF59A /* ViewController.m */; };
@@ -19,6 +18,9 @@
 		3F46EAB01F57A34A006BF59A /* guwangyuleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F46EAAF1F57A34A006BF59A /* guwangyuleUITests.m */; };
 		3F46EAC11F57ABD6006BF59A /* WeChatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F46EAC01F57ABD6006BF59A /* WeChatManager.m */; };
 		3F46EAC71F57BE11006BF59A /* DownLoadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F46EAC51F57BE11006BF59A /* DownLoadManager.m */; };
+		3F48694F1F60E688006DCED0 /* CreateRoomInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F48694E1F60E688006DCED0 /* CreateRoomInfo.m */; };
+		3F4869521F60E6B4006DCED0 /* LoginInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4869511F60E6B4006DCED0 /* LoginInfo.m */; };
+		3F4869551F60E6C3006DCED0 /* ModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4869541F60E6C3006DCED0 /* ModelManager.m */; };
 		3F4D1E311F5E52FF003F2ABA /* buyDiamond.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4D1E301F5E52FF003F2ABA /* buyDiamond.m */; };
 		3F4D1E331F5E531D003F2ABA /* buyDiamond.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F4D1E321F5E531D003F2ABA /* buyDiamond.xib */; };
 		3F4D1E371F5E5772003F2ABA /* buyGold.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4D1E361F5E5772003F2ABA /* buyGold.m */; };
@@ -29,6 +31,7 @@
 		3F4D1E451F5E7F06003F2ABA /* EnterRoom.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F4D1E441F5E7F06003F2ABA /* EnterRoom.xib */; };
 		3F4D1E481F5E7F4B003F2ABA /* quitRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4D1E471F5E7F4B003F2ABA /* quitRoom.m */; };
 		3F4D1E4A1F5E7F5E003F2ABA /* quitRoom.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F4D1E491F5E7F5E003F2ABA /* quitRoom.xib */; };
+		3F62EBBE1F668B29005AF498 /* StakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F62EBBD1F668B29005AF498 /* StakeViewController.m */; };
 		3FC134AF1F596CE80053EC34 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC134AE1F596CE80053EC34 /* MainViewController.m */; };
 		5C85B262E6924E1122B93E02 /* libPods-guwangyule.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D7D20485C5792084BE9054A /* libPods-guwangyule.a */; };
 /* End PBXBuildFile section */
@@ -54,8 +57,6 @@
 		1A933D15834861B4919284D3 /* Pods-guwangyule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-guwangyule.debug.xcconfig"; path = "Pods/Target Support Files/Pods-guwangyule/Pods-guwangyule.debug.xcconfig"; sourceTree = "<group>"; };
 		3F030F1C1F5FE3210099463B /* CreateRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateRoomViewController.h; sourceTree = "<group>"; };
 		3F030F1D1F5FE3210099463B /* CreateRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateRoomViewController.m; sourceTree = "<group>"; };
-		3F030F251F5FF4B20099463B /* createRoomInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = createRoomInfoManager.h; sourceTree = "<group>"; };
-		3F030F261F5FF4B20099463B /* createRoomInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = createRoomInfoManager.m; sourceTree = "<group>"; };
 		3F46EA871F57A34A006BF59A /* guwangyule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = guwangyule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F46EA8B1F57A34A006BF59A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3F46EA8D1F57A34A006BF59A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -77,6 +78,12 @@
 		3F46EAC41F57B8A5006BF59A /* ApiManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiManager.h; sourceTree = "<group>"; };
 		3F46EAC51F57BE11006BF59A /* DownLoadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadManager.m; sourceTree = "<group>"; };
 		3F46EAC61F57BE11006BF59A /* DownLoadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadManager.h; sourceTree = "<group>"; };
+		3F48694D1F60E688006DCED0 /* CreateRoomInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateRoomInfo.h; sourceTree = "<group>"; };
+		3F48694E1F60E688006DCED0 /* CreateRoomInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateRoomInfo.m; sourceTree = "<group>"; };
+		3F4869501F60E6B4006DCED0 /* LoginInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginInfo.h; sourceTree = "<group>"; };
+		3F4869511F60E6B4006DCED0 /* LoginInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginInfo.m; sourceTree = "<group>"; };
+		3F4869531F60E6C3006DCED0 /* ModelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelManager.h; sourceTree = "<group>"; };
+		3F4869541F60E6C3006DCED0 /* ModelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelManager.m; sourceTree = "<group>"; };
 		3F4D1E2F1F5E52FF003F2ABA /* buyDiamond.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buyDiamond.h; sourceTree = "<group>"; };
 		3F4D1E301F5E52FF003F2ABA /* buyDiamond.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = buyDiamond.m; sourceTree = "<group>"; };
 		3F4D1E321F5E531D003F2ABA /* buyDiamond.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = buyDiamond.xib; path = ../buyDiamond.xib; sourceTree = "<group>"; };
@@ -92,6 +99,8 @@
 		3F4D1E461F5E7F4B003F2ABA /* quitRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = quitRoom.h; sourceTree = "<group>"; };
 		3F4D1E471F5E7F4B003F2ABA /* quitRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = quitRoom.m; sourceTree = "<group>"; };
 		3F4D1E491F5E7F5E003F2ABA /* quitRoom.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = quitRoom.xib; sourceTree = "<group>"; };
+		3F62EBBC1F668B29005AF498 /* StakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StakeViewController.h; sourceTree = "<group>"; };
+		3F62EBBD1F668B29005AF498 /* StakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StakeViewController.m; sourceTree = "<group>"; };
 		3FC134AD1F596CE80053EC34 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		3FC134AE1F596CE80053EC34 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		674EC8BE3D457853A7DAD9C7 /* Pods-guwangyule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-guwangyule.release.xcconfig"; path = "Pods/Target Support Files/Pods-guwangyule/Pods-guwangyule.release.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +166,7 @@
 		3F46EA891F57A34A006BF59A /* guwangyule */ = {
 			isa = PBXGroup;
 			children = (
+				3F48694C1F60E65D006DCED0 /* Model */,
 				3F4D1E3B1F5E7E40003F2ABA /* Manager */,
 				3F4D1E3A1F5E7E27003F2ABA /* viewController */,
 				3F4D1E341F5E571F003F2ABA /* View */,
@@ -196,6 +206,17 @@
 			path = guwangyuleUITests;
 			sourceTree = "<group>";
 		};
+		3F48694C1F60E65D006DCED0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F48694D1F60E688006DCED0 /* CreateRoomInfo.h */,
+				3F48694E1F60E688006DCED0 /* CreateRoomInfo.m */,
+				3F4869501F60E6B4006DCED0 /* LoginInfo.h */,
+				3F4869511F60E6B4006DCED0 /* LoginInfo.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		3F4D1E341F5E571F003F2ABA /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +248,8 @@
 				3FC134AE1F596CE80053EC34 /* MainViewController.m */,
 				3F030F1C1F5FE3210099463B /* CreateRoomViewController.h */,
 				3F030F1D1F5FE3210099463B /* CreateRoomViewController.m */,
+				3F62EBBC1F668B29005AF498 /* StakeViewController.h */,
+				3F62EBBD1F668B29005AF498 /* StakeViewController.m */,
 				3F46EA931F57A34A006BF59A /* Main.storyboard */,
 			);
 			name = viewController;
@@ -240,8 +263,8 @@
 				3F46EAC51F57BE11006BF59A /* DownLoadManager.m */,
 				3F46EABF1F57ABD6006BF59A /* WeChatManager.h */,
 				3F46EAC01F57ABD6006BF59A /* WeChatManager.m */,
-				3F030F251F5FF4B20099463B /* createRoomInfoManager.h */,
-				3F030F261F5FF4B20099463B /* createRoomInfoManager.m */,
+				3F4869531F60E6C3006DCED0 /* ModelManager.h */,
+				3F4869541F60E6C3006DCED0 /* ModelManager.m */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -450,13 +473,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F48694F1F60E688006DCED0 /* CreateRoomInfo.m in Sources */,
 				3F46EA921F57A34A006BF59A /* ViewController.m in Sources */,
 				3F030F1E1F5FE3210099463B /* CreateRoomViewController.m in Sources */,
-				3F030F271F5FF4B20099463B /* createRoomInfoManager.m in Sources */,
 				3F4D1E311F5E52FF003F2ABA /* buyDiamond.m in Sources */,
 				3F4D1E371F5E5772003F2ABA /* buyGold.m in Sources */,
 				3F4D1E431F5E7EF6003F2ABA /* EnterRoom.m in Sources */,
 				3FC134AF1F596CE80053EC34 /* MainViewController.m in Sources */,
+				3F62EBBE1F668B29005AF498 /* StakeViewController.m in Sources */,
+				3F4869521F60E6B4006DCED0 /* LoginInfo.m in Sources */,
+				3F4869551F60E6C3006DCED0 /* ModelManager.m in Sources */,
 				3F46EAC11F57ABD6006BF59A /* WeChatManager.m in Sources */,
 				3F46EAC71F57BE11006BF59A /* DownLoadManager.m in Sources */,
 				3F4D1E3E1F5E7EAE003F2ABA /* createRoom.m in Sources */,
