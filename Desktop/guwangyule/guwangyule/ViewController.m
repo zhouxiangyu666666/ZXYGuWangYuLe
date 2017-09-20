@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "WeChatManager.h"
 #import "ApiManager.h"
+#import "MBProgressHUD.h"
 @interface ViewController ()
 
 @end
@@ -21,7 +22,7 @@
     
 }
 - (IBAction)weChatLoginClick:(UIButton *)sender {
-    [[WeChatManager shareInterface] sendAuthRequest];
+     [[WeChatManager shareInterface] sendAuthRequest];
 }
 -(void)turnToMainVC
 {

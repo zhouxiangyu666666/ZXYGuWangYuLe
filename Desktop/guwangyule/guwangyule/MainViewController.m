@@ -12,7 +12,7 @@
 #import "buyDiamond.h"
 #import "createRoom.h"
 #import "EnterRoom.h"
-#import "quitRoom.h"
+#import "quitGame.h"
 #import <UIImageView+WebCache.h>
 @interface MainViewController ()
 
@@ -32,15 +32,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.tag=500;
     [self setUserInfo];
     [self anmationForNoticeLabel];
     [self anmationForLight];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(turnToCreateRoomVC) name:@"createRoom" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(turnToAddRoomVC) name:@"addRoom" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(quitGame) name:@"quitGame" object:nil];
 }
 -(void)setUserInfo
 {
     _userNameLabel.text=[ModelManager shareInterface].loginInfoModel.userName;
-    _userIdLabel.text=[NSString stringWithFormat:@"%@",[ModelManager shareInterface].loginInfoModel.userId];
+    _userIdLabel.text=[NSString stringWithFormat:@"ID:%@",[ModelManager shareInterface].loginInfoModel.userId];
     _diamondLabel.text=[NSString stringWithFormat:@"%@",[ModelManager shareInterface].loginInfoModel.diamondCount];
     _goldLabel.text=[NSString stringWithFormat:@"%@",[ModelManager shareInterface].loginInfoModel.goldCount];
     [_headerImageView sd_setImageWithURL:[NSURL URLWithString:[ModelManager shareInterface].loginInfoModel.userLogo]];
@@ -79,7 +82,7 @@
     [self showViewWithName:bGVC];
 }
 - (IBAction)quit:(UIButton *)sender {
-    quitRoom *qRVC = [[NSBundle mainBundle]loadNibNamed:@"quitRoom" owner:nil options:nil].lastObject;
+    quitGame *qRVC = [[NSBundle mainBundle]loadNibNamed:@"quitGame" owner:nil options:nil].lastObject;
     [self showViewWithName:qRVC];
 }
 - (IBAction)createRoom:(UIButton *)sender {
@@ -99,7 +102,14 @@
 {
     [self performSegueWithIdentifier:@"createRoom" sender:self];
 }
-
+-(void)turnToAddRoomVC
+{
+    [self performSegueWithIdentifier:@"addRoom" sender:self];
+}
+-(void)quitGame
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

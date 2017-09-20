@@ -27,6 +27,11 @@
     
        [request setHTTPBody:Paradata];
     
+       [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-type"];
+    
+       [request setValue:@"text/html;charset=UTF-8,application/json, text/javascript, */*; q=0.01"  forHTTPHeaderField:@"Accept"];
+    
+    
        [request setTimeoutInterval:10];
 
         NSURLSession *session = [NSURLSession sharedSession];
@@ -45,8 +50,8 @@
                     callback(dic);
                 }
                 else{
-                    hud.labelText=@"网络连接失败";
-                    [hud hide:YES afterDelay:1];
+                    hud.label.text=@"网络连接失败";
+                    [hud hideAnimated:YES afterDelay:1];
                 }
             });
         }];

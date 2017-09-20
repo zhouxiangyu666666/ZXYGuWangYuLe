@@ -11,8 +11,9 @@
 @interface CreateRoomInfo : NSObject
 @property(nonatomic,strong)NSString *diamondCount;
 @property(nonatomic,strong)NSString *goldCount;
-@property(nonatomic,strong)NSString *userId;
-@property(nonatomic,strong)NSString *userLogo;
-@property(nonatomic,strong)NSString *userName;
+@property(nonatomic,strong)NSString *memberCount;
+@property(nonatomic,strong)NSString *ownerId;
+@property(nonatomic,strong)NSString *ownerLogo;
+@property(nonatomic,strong)NSString *ownerName;
 @property(nonatomic,strong)NSString *roomId;
 @end

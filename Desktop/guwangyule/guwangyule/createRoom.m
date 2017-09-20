@@ -11,6 +11,7 @@
 #import "ApiManager.h"
 #import "ModelManager.h"
 #import "CreateRoomInfo.h"
+#import "MBProgressHUD.h"
 @implementation createRoom
 
 - (IBAction)cancel:(UIButton *)sender {
@@ -18,12 +19,23 @@
 }
 
 - (IBAction)certain:(UIButton *)sender {
+    MBProgressHUD * hud = [MBProgressHUD showHUDAddedTo:self.superview animated:YES];
+    hud.label.text=@"创建中...";
     [ModelManager shareInterface].createRoomInfoModel=[[CreateRoomInfo alloc]init];
-    NSString *param = [NSString stringWithFormat:@"userId=%@",@"12"];
-    [[DownLoadManager shareInterface] postddByByUrlPath:createRoom_api andParams:param andHUD:nil andCallBack:^(id obj) {
-        [[ModelManager shareInterface].createRoomInfoModel setValuesForKeysWithDictionary:[obj objectForKey:@"result"]];
-        [[NSNotificationCenter defaultCenter]postNotificationName:@"createRoom" object:nil];
+    NSString *param = [NSString stringWithFormat:@"userId=%@",[ModelManager shareInterface].loginInfoModel.userId];
+    [[DownLoadManager shareInterface] postddByByUrlPath:createRoom_api andParams:param andHUD:hud andCallBack:^(id obj) {
+        NSLog(@"%@",obj);
+        if ([[obj objectForKey:@"code"] isEqualToString:@"0"]) {
+            [[ModelManager shareInterface].createRoomInfoModel setValuesForKeysWithDictionary:[obj objectForKey:@"result"]];
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"createRoom" object:nil];
+            [hud hideAnimated:YES afterDelay:1];
+        }
+        else{
+            hud.label.text=[obj objectForKey:@"message"];
+            [hud hideAnimated:YES afterDelay:1];
+        }
     }];
+    [self removeFromSuperview];
 }
 
 @end

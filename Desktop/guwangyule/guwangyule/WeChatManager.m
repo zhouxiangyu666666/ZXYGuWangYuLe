@@ -37,11 +37,14 @@
     }
 }
 -(void) onResp:(SendAuthResp*)resp{
+    NSLog(@"%@",resp.code);
     if (resp.errCode==0) {
         NSString *param = [NSString stringWithFormat:@"code=%@&phone=0",resp.code];
         [[DownLoadManager shareInterface] postddByByUrlPath:weChatLogin_api andParams:param andHUD:nil andCallBack:^(id obj) {
             [ModelManager shareInterface].loginInfoModel=[[LoginInfo alloc]init];
+            NSLog(@"%@",obj);
             [[ModelManager shareInterface].loginInfoModel setValuesForKeysWithDictionary:[obj objectForKey:@"result"]];
+            NSLog(@"%@",[ModelManager shareInterface].loginInfoModel.userId);
             [[NSNotificationCenter defaultCenter]postNotificationName:@"turnToMainVC" object:nil];
             
         }];

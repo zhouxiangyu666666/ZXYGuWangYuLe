@@ -1,5 +1,5 @@
 //
-//  quitRoom.h
+//  quitGame.h
 //  guwangyule
 //
 //  Created by Jeremy on 2017/9/5.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface quitRoom : UIView
+@interface quitGame : UIView
 
 @end

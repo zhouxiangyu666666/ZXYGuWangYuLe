@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ownerNoticeView">
+            <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ts" translatesAutoresizingMaskIntoConstraints="NO" id="gg0-rQ-ega">
+                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="骰子点数：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxM-1t-7Q8">
+                    <rect key="frame" x="257.5" y="122" width="152" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4U-mH-bIs">
+                    <rect key="frame" x="265" y="245" width="137" height="45"/>
+                    <state key="normal" image="wzdl"/>
+                    <connections>
+                        <action selector="IKnow:" destination="iN0-l3-epB" eventType="touchUpInside" id="8UM-h1-BmP"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gg0-rQ-ega" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0sf-Km-g5t"/>
+                <constraint firstItem="H4U-mH-bIs" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="TtS-m7-gRG"/>
+                <constraint firstItem="H4U-mH-bIs" firstAttribute="top" secondItem="gg0-rQ-ega" secondAttribute="bottom" constant="-130" id="ZuP-LM-x8F"/>
+                <constraint firstItem="gg0-rQ-ega" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gFC-7g-s30"/>
+                <constraint firstAttribute="trailing" secondItem="gg0-rQ-ega" secondAttribute="trailing" id="hsR-1m-8gO"/>
+                <constraint firstItem="jxM-1t-7Q8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="rvK-LS-Rh7"/>
+                <constraint firstItem="gg0-rQ-ega" firstAttribute="top" secondItem="jxM-1t-7Q8" secondAttribute="bottom" constant="-158" id="sci-ux-6KC"/>
+                <constraint firstAttribute="bottom" secondItem="gg0-rQ-ega" secondAttribute="bottom" id="xiI-Si-mGk"/>
+            </constraints>
+            <connections>
+                <outlet property="diceNumber" destination="jxM-1t-7Q8" id="JUd-fG-f9K"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="67.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ts" width="425" height="251"/>
+        <image name="wzdl" width="137" height="45"/>
+    </resources>
+</document>
