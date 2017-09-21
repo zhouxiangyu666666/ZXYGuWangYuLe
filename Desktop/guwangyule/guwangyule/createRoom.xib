@@ -16,28 +16,25 @@
             <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cjian" translatesAutoresizingMaskIntoConstraints="NO" id="Pyf-Um-wBm">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="组9" translatesAutoresizingMaskIntoConstraints="NO" id="Pyf-Um-wBm">
                     <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="创建房间需花费10个钻石" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Nz-dr-TSm">
-                    <rect key="frame" x="204.5" y="174" width="258" height="27.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                    <rect key="frame" x="221" y="176" width="226" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zuans" translatesAutoresizingMaskIntoConstraints="NO" id="tFT-IQ-CkF">
-                    <rect key="frame" x="470" y="174" width="30" height="27.5"/>
-                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ItP-KW-lAs">
-                    <rect key="frame" x="120" y="255" width="111" height="46"/>
-                    <state key="normal" image="qx"/>
+                    <rect key="frame" x="197.5" y="255" width="111" height="37"/>
+                    <state key="normal" image="组2-1"/>
                     <connections>
                         <action selector="cancel:" destination="iN0-l3-epB" eventType="touchUpInside" id="htk-UR-iSs"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZ1-Zu-Gr7">
-                    <rect key="frame" x="436" y="255" width="111" height="46"/>
-                    <state key="normal" image="qd"/>
+                    <rect key="frame" x="358.5" y="255" width="111" height="37"/>
+                    <state key="normal" image="组8"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="20"/>
@@ -47,21 +44,33 @@
                         <action selector="certain:" destination="iN0-l3-epB" eventType="touchUpInside" id="iun-sC-R6b"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="提示" translatesAutoresizingMaskIntoConstraints="NO" id="R2b-hU-PLa">
+                    <rect key="frame" x="312" y="9" width="42" height="21"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zqu-tP-iWT">
+                    <rect key="frame" x="308.5" y="220" width="50" height="100"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="TK3-L0-D7B"/>
+                        <constraint firstAttribute="width" constant="50" id="bqD-k6-wNK"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="tFT-IQ-CkF" firstAttribute="top" secondItem="5Nz-dr-TSm" secondAttribute="top" id="1Hh-e7-Sbi"/>
+                <constraint firstItem="Zqu-tP-iWT" firstAttribute="top" secondItem="Pyf-Um-wBm" secondAttribute="bottom" constant="-155" id="037-98-Dcf"/>
                 <constraint firstAttribute="bottom" secondItem="Pyf-Um-wBm" secondAttribute="bottom" id="3rg-0D-44g"/>
                 <constraint firstItem="ItP-KW-lAs" firstAttribute="top" secondItem="Pyf-Um-wBm" secondAttribute="bottom" multiplier="255/375" id="71Z-Wf-Wtn"/>
                 <constraint firstItem="Pyf-Um-wBm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="946-gQ-xQn"/>
-                <constraint firstItem="tFT-IQ-CkF" firstAttribute="bottom" secondItem="5Nz-dr-TSm" secondAttribute="bottom" id="C8R-uF-sLT"/>
+                <constraint firstItem="Zqu-tP-iWT" firstAttribute="leading" secondItem="ItP-KW-lAs" secondAttribute="trailing" id="HoJ-5f-eQ8"/>
                 <constraint firstItem="QZ1-Zu-Gr7" firstAttribute="top" secondItem="ItP-KW-lAs" secondAttribute="top" id="IwM-l2-gb7"/>
                 <constraint firstItem="Pyf-Um-wBm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Nmv-6m-Q11"/>
                 <constraint firstItem="5Nz-dr-TSm" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="PMY-F2-krA"/>
-                <constraint firstItem="tFT-IQ-CkF" firstAttribute="leading" secondItem="5Nz-dr-TSm" secondAttribute="trailing" constant="7.5" id="agI-D7-Rdj"/>
+                <constraint firstItem="Pyf-Um-wBm" firstAttribute="top" secondItem="R2b-hU-PLa" secondAttribute="bottom" constant="-30" id="YyW-P4-ijN"/>
+                <constraint firstItem="Zqu-tP-iWT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ng4-mb-bdu"/>
                 <constraint firstItem="5Nz-dr-TSm" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="oR6-bd-iHH"/>
-                <constraint firstItem="QZ1-Zu-Gr7" firstAttribute="trailing" secondItem="Pyf-Um-wBm" secondAttribute="trailing" multiplier="547/667" id="pFU-l1-Bg2"/>
-                <constraint firstItem="ItP-KW-lAs" firstAttribute="leading" secondItem="Pyf-Um-wBm" secondAttribute="trailing" multiplier="120/667" id="vyE-5O-wzN"/>
+                <constraint firstItem="QZ1-Zu-Gr7" firstAttribute="leading" secondItem="Zqu-tP-iWT" secondAttribute="trailing" id="ung-qw-Sgn"/>
+                <constraint firstItem="R2b-hU-PLa" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ww7-eH-woY"/>
                 <constraint firstAttribute="trailing" secondItem="Pyf-Um-wBm" secondAttribute="trailing" id="wxZ-6x-TtR"/>
             </constraints>
             <userDefinedRuntimeAttributes>
@@ -73,9 +82,9 @@
         </view>
     </objects>
     <resources>
-        <image name="cjian" width="481" height="284"/>
-        <image name="qd" width="111" height="46"/>
-        <image name="qx" width="111" height="46"/>
-        <image name="zuans" width="30" height="23"/>
+        <image name="提示" width="42" height="21"/>
+        <image name="组2-1" width="111" height="37"/>
+        <image name="组8" width="111" height="37"/>
+        <image name="组9" width="425" height="274"/>
     </resources>
 </document>

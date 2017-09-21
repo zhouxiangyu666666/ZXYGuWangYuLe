@@ -19,18 +19,21 @@
                     <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="充值钻石请联系客服微信:666" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KI5-ZG-Hrk">
-                    <rect key="frame" x="182" y="174.5" width="305" height="27.5"/>
+                    <rect key="frame" x="181" y="174.5" width="305" height="27.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdS-zA-IXP">
-                    <rect key="frame" x="265" y="229.5" width="137" height="45"/>
-                    <state key="normal" image="wzdl"/>
+                    <rect key="frame" x="278" y="229.5" width="111" height="37"/>
+                    <state key="normal" image="iknow"/>
                     <connections>
                         <action selector="Iknow:" destination="iN0-l3-epB" eventType="touchUpInside" id="naf-lC-OeB"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="提示" translatesAutoresizingMaskIntoConstraints="NO" id="UY6-fi-HhH">
+                    <rect key="frame" x="312.5" y="9" width="42" height="21"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
@@ -40,7 +43,9 @@
                 <constraint firstAttribute="bottom" secondItem="a27-4P-Zwo" secondAttribute="bottom" id="ITK-hc-tzX"/>
                 <constraint firstAttribute="trailing" secondItem="a27-4P-Zwo" secondAttribute="trailing" id="KU1-Qo-akg"/>
                 <constraint firstItem="vdS-zA-IXP" firstAttribute="top" secondItem="KI5-ZG-Hrk" secondAttribute="bottom" constant="27.5" id="MgX-bX-qAL"/>
+                <constraint firstItem="UY6-fi-HhH" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="QdO-Cq-lYE"/>
                 <constraint firstItem="KI5-ZG-Hrk" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="emw-HA-LqM"/>
+                <constraint firstItem="a27-4P-Zwo" firstAttribute="top" secondItem="UY6-fi-HhH" secondAttribute="bottom" constant="-30" id="phJ-ht-8BL"/>
                 <constraint firstItem="KI5-ZG-Hrk" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="yNm-Eu-2cr"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -53,7 +58,8 @@
         </view>
     </objects>
     <resources>
-        <image name="ts" width="425" height="251"/>
-        <image name="wzdl" width="137" height="45"/>
+        <image name="iknow" width="111" height="37"/>
+        <image name="ts" width="425" height="274"/>
+        <image name="提示" width="42" height="21"/>
     </resources>
 </document>

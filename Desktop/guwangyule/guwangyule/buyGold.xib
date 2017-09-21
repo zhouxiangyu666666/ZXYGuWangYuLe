@@ -25,22 +25,27 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlt-Zd-cfk">
-                    <rect key="frame" x="265" y="229.5" width="137" height="45"/>
-                    <state key="normal" image="wzdl"/>
+                    <rect key="frame" x="278" y="229.5" width="111" height="37"/>
+                    <state key="normal" image="iknow"/>
                     <connections>
                         <action selector="IKown:" destination="6nh-M8-C20" eventType="touchUpInside" id="skI-rl-kfd"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="提示" translatesAutoresizingMaskIntoConstraints="NO" id="bhg-bF-piM">
+                    <rect key="frame" x="312" y="9" width="42" height="21"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="Pf6-I0-GWG" secondAttribute="trailing" id="4b8-Ab-4nj"/>
+                <constraint firstItem="bhg-bF-piM" firstAttribute="centerX" secondItem="6nh-M8-C20" secondAttribute="centerX" id="8o9-F3-9yk"/>
                 <constraint firstAttribute="bottom" secondItem="Pf6-I0-GWG" secondAttribute="bottom" id="EVL-Bv-LZL"/>
                 <constraint firstItem="mXm-6f-qKK" firstAttribute="centerX" secondItem="6nh-M8-C20" secondAttribute="centerX" id="LPT-0D-6Dl"/>
                 <constraint firstItem="nlt-Zd-cfk" firstAttribute="centerX" secondItem="6nh-M8-C20" secondAttribute="centerX" id="LRv-B8-MMs"/>
                 <constraint firstItem="Pf6-I0-GWG" firstAttribute="leading" secondItem="6nh-M8-C20" secondAttribute="leading" id="Obh-JD-ayO"/>
                 <constraint firstItem="mXm-6f-qKK" firstAttribute="centerY" secondItem="6nh-M8-C20" secondAttribute="centerY" id="Pl6-fC-A8J"/>
                 <constraint firstItem="Pf6-I0-GWG" firstAttribute="top" secondItem="6nh-M8-C20" secondAttribute="top" id="S1x-zr-vC9"/>
+                <constraint firstItem="Pf6-I0-GWG" firstAttribute="top" secondItem="bhg-bF-piM" secondAttribute="bottom" constant="-30" id="i0F-hT-xdU"/>
                 <constraint firstItem="nlt-Zd-cfk" firstAttribute="top" secondItem="mXm-6f-qKK" secondAttribute="bottom" constant="27.5" id="y03-0q-sYA"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -53,7 +58,8 @@
         </view>
     </objects>
     <resources>
-        <image name="ts" width="425" height="251"/>
-        <image name="wzdl" width="137" height="45"/>
+        <image name="iknow" width="111" height="37"/>
+        <image name="ts" width="425" height="274"/>
+        <image name="提示" width="42" height="21"/>
     </resources>
 </document>

@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface StakeViewController : UIViewController
-
+{
+    NSTimer *searchTimer;
+}
 @end

@@ -29,6 +29,7 @@
         if ([[obj objectForKey:@"code"] isEqualToString:@"0"]) {
             [[ModelManager shareInterface].addRoomInfo setValuesForKeysWithDictionary:[obj objectForKey:@"result"]];
             [[NSNotificationCenter defaultCenter]postNotificationName:@"addRoom" object:nil];
+            [hud hideAnimated:YES afterDelay:1];
         }
         else{
             hud.label.text=[obj objectForKey:@"message"];

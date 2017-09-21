@@ -14,6 +14,9 @@
 #import "EnterRoom.h"
 #import "quitGame.h"
 #import <UIImageView+WebCache.h>
+#import "DownLoadManager.h"
+#import "ApiManager.h"
+#import "SearchUserInfo.h"
 @interface MainViewController ()
 
 @property (strong, nonatomic) IBOutlet UILabel *noticeLabel;
@@ -32,10 +35,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.tag=500;
     [self setUserInfo];
-    [self anmationForNoticeLabel];
-    [self anmationForLight];
+    [self performSelector:@selector(anmationForNoticeLabel) withObject:nil afterDelay:1];
+    [self performSelector:@selector(anmationForLight) withObject:nil afterDelay:1];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(turnToCreateRoomVC) name:@"createRoom" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(turnToAddRoomVC) name:@"addRoom" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(quitGame) name:@"quitGame" object:nil];
@@ -109,6 +111,21 @@
 -(void)quitGame
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+- (IBAction)refresh:(UIButton *)sender {
+    
+    [ModelManager shareInterface].searchUserInfo=[[SearchUserInfo alloc]init];
+    NSString *param = [NSString stringWithFormat:@"userId=%@",[ModelManager shareInterface].loginInfoModel.userId];
+    [[DownLoadManager shareInterface] postddByByUrlPath:searchUserInfo_api andParams:param andHUD:nil andCallBack:^(id obj) {
+        if ([[obj objectForKey:@"code"] isEqualToString:@"0"]) {
+            [[ModelManager shareInterface].searchUserInfo setValuesForKeysWithDictionary:[obj objectForKey:@"result"]];
+        }
+    }];
+}
+-(void)refreshUserInfo
+{
+    _diamondLabel.text=[NSString stringWithFormat:@"%@",[ModelManager shareInterface].searchUserInfo.diamondCount];
+    _goldLabel.text=[NSString stringWithFormat:@"%@",[ModelManager shareInterface].searchUserInfo.goldCount];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

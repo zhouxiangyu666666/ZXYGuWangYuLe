@@ -25,23 +25,28 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4U-mH-bIs">
-                    <rect key="frame" x="265" y="245" width="137" height="45"/>
-                    <state key="normal" image="wzdl"/>
+                    <rect key="frame" x="278" y="208" width="111" height="37"/>
+                    <state key="normal" image="iknow"/>
                     <connections>
                         <action selector="IKnow:" destination="iN0-l3-epB" eventType="touchUpInside" id="8UM-h1-BmP"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="提示" translatesAutoresizingMaskIntoConstraints="NO" id="ka9-B7-cXZ">
+                    <rect key="frame" x="312" y="9" width="42" height="21"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="gg0-rQ-ega" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0sf-Km-g5t"/>
+                <constraint firstItem="gg0-rQ-ega" firstAttribute="top" secondItem="ka9-B7-cXZ" secondAttribute="bottom" constant="-30" id="RDO-bF-MDJ"/>
                 <constraint firstItem="H4U-mH-bIs" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="TtS-m7-gRG"/>
-                <constraint firstItem="H4U-mH-bIs" firstAttribute="top" secondItem="gg0-rQ-ega" secondAttribute="bottom" constant="-130" id="ZuP-LM-x8F"/>
+                <constraint firstItem="H4U-mH-bIs" firstAttribute="top" secondItem="jxM-1t-7Q8" secondAttribute="bottom" constant="50" id="d6w-eC-dap"/>
                 <constraint firstItem="gg0-rQ-ega" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gFC-7g-s30"/>
                 <constraint firstAttribute="trailing" secondItem="gg0-rQ-ega" secondAttribute="trailing" id="hsR-1m-8gO"/>
                 <constraint firstItem="jxM-1t-7Q8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="rvK-LS-Rh7"/>
                 <constraint firstItem="gg0-rQ-ega" firstAttribute="top" secondItem="jxM-1t-7Q8" secondAttribute="bottom" constant="-158" id="sci-ux-6KC"/>
                 <constraint firstAttribute="bottom" secondItem="gg0-rQ-ega" secondAttribute="bottom" id="xiI-Si-mGk"/>
+                <constraint firstItem="ka9-B7-cXZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="z7j-bL-uCR"/>
             </constraints>
             <connections>
                 <outlet property="diceNumber" destination="jxM-1t-7Q8" id="JUd-fG-f9K"/>
@@ -50,7 +55,8 @@
         </view>
     </objects>
     <resources>
-        <image name="ts" width="425" height="251"/>
-        <image name="wzdl" width="137" height="45"/>
+        <image name="iknow" width="111" height="37"/>
+        <image name="ts" width="425" height="274"/>
+        <image name="提示" width="42" height="21"/>
     </resources>
 </document>

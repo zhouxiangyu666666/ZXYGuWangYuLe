@@ -15,16 +15,23 @@
 #import <UIImageView+WebCache.h>
 #import "UserGameInfo.h"
 #import "userNoticeView.h"
+#import "buyGold.h"
 @interface AddViewController ()
 @property (strong, nonatomic) IBOutlet UIImageView *diceImageView;
 @property (strong, nonatomic) IBOutlet UILabel *roomIdLabel;
+
 @property (strong, nonatomic) IBOutlet UILabel *previousDiceLabel;
+
 @property (strong, nonatomic) IBOutlet UIImageView *ownerLogo;
 @property (strong, nonatomic) IBOutlet UIImageView *userLogo;
+
 @property (strong, nonatomic) IBOutlet UILabel *userName;
 @property (strong, nonatomic) IBOutlet UILabel *userId;
+
+
 @property (strong, nonatomic) IBOutlet UILabel *GoldLabel;
 @property (strong, nonatomic) IBOutlet UILabel *peopleNumber;
+
 @property (strong, nonatomic) IBOutlet UIButton *stakeBuuton;
 
 @end
@@ -33,6 +40,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(beginTimer) name:@"beginTimer" object:nil];
     [self getInfoConfigue];
     [ModelManager shareInterface].userGameInfo=[[UserGameInfo alloc]init];
     searchTimer=[NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(CheckUSerGameInfo) userInfo:nil repeats:YES];
@@ -42,10 +50,12 @@
     [ModelManager shareInterface].roomInfo=[[RoomInfo alloc]init];
     NSString *param = [NSString stringWithFormat:@"userId=%@&roomId=%@",[ModelManager shareInterface].loginInfoModel.userId,[ModelManager shareInterface].addRoomInfo.roomId];
     [[DownLoadManager shareInterface] postddByByUrlPath:searchRoomInfo_api andParams:param andHUD:nil andCallBack:^(id obj) {
-    [[ModelManager shareInterface].roomInfo setValuesForKeysWithDictionary:[obj objectForKey:@"result"]];
-    [ModelManager shareInterface].gameTimes=[[ModelManager shareInterface].roomInfo.gameTimes intValue];
+        NSLog(@"%@",obj);
     //KVO监听局数
     [[ModelManager shareInterface] addObserver:self forKeyPath:@"gameTimes" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+    [[ModelManager shareInterface].roomInfo setValuesForKeysWithDictionary:[obj objectForKey:@"result"]];
+        
+    [ModelManager shareInterface].gameTimes=[[ModelManager shareInterface].roomInfo.gameTimes intValue];
     [self setInfoConfigue];
     }];
 }
@@ -53,7 +63,7 @@
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
 {
     if ([keyPath isEqualToString:@"gameTimes"]) {
-        if (![change[NSKeyValueChangeOldKey] isEqualToString:change[NSKeyValueChangeNewKey]]) {
+        if (!(change[NSKeyValueChangeOldKey]==change[NSKeyValueChangeNewKey])) {
             [self startAnimation];
         }
     }
@@ -66,7 +76,8 @@
     _GoldLabel.text=[NSString stringWithFormat:@"%@",[ModelManager shareInterface].roomInfo.userGoldCount];
     [_ownerLogo sd_setImageWithURL:[NSURL URLWithString:[ModelManager shareInterface].roomInfo.ownerLogo]placeholderImage:[UIImage imageNamed:@"fz"]];
     [_userLogo sd_setImageWithURL:[NSURL URLWithString:[ModelManager shareInterface].roomInfo.userLogo]placeholderImage:[UIImage imageNamed:@"fz"]];
-    [self setRoomPeopleNumber];
+    _peopleNumber.text=[NSString stringWithFormat:@"人数:%@/50",[ModelManager shareInterface].roomInfo.memberCount];
+    
     
 }
 -(void)setRoomPeopleNumber
@@ -75,7 +86,8 @@
 }
 -(void)SetGamePreviousDice
 {
-    _previousDiceLabel.text=[NSString stringWithFormat:@"上一期骰数:%@",[ModelManager shareInterface].userGameInfo.gameResult];
+//    [NSString stringWithFormat:@"%@"[ModelManager shareInterface].userGameInfo.gameResult];
+//    _previousDiceLabel.text=[NSString stringWithFormat:@"上一期骰数:%@",];
 }
 -(void)startAnimation
 {
@@ -83,7 +95,7 @@
     _diceImageView.hidden=NO;
     NSMutableArray *images = [[NSMutableArray alloc]initWithCapacity:6];//因为这个动态图片是由6张图片组成所有把图片放到一个数组中
     for (int i=0; i<6; i++) {
-        NSString *imageName = [NSString stringWithFormat:@"%d",i+1];//for循环依次把图片取出 这里我的图片名为1 － %d为i的值
+        NSString *imageName = [NSString stringWithFormat:@"%d",i+101];//for循环依次把图片取出 这里我的图片名为1 － %d为i的值
         UIImage *image = [UIImage imageNamed:imageName];
         [images addObject:image];
     }
@@ -94,12 +106,18 @@
     _diceImageView.animationDuration = 1;
     _diceImageView.animationRepeatCount = 3;//动画进行几次结束
     [_diceImageView startAnimating];//开始动画
-    [self performSelector:@selector(AfterDelay) withObject:nil afterDelay:3];
+    [self performSelector:@selector(AfterDelay1) withObject:nil afterDelay:3];
 }
--(void)AfterDelay{
+-(void)AfterDelay1{
+    
+//    UIView *lastView=[self.view viewWithTag:[ModelManager shareInterface].gameTimes-1];
+//    if (lastView) {
+//        [lastView removeFromSuperview];
+//    }
     _diceImageView.hidden=YES;
     _stakeBuuton.userInteractionEnabled=YES;
     userNoticeView *UNV = [[NSBundle mainBundle]loadNibNamed:@"userNoticeView" owner:nil options:nil].lastObject;
+    UNV.tag=[ModelManager shareInterface].gameTimes;
     UNV.resultGain.text=[NSString stringWithFormat:@"您的亏盈情况:%@",[ModelManager shareInterface].userGameInfo.resultGain];
     UNV.diceNumber.text=[NSString stringWithFormat:@"骰子点数:%@",[ModelManager shareInterface].userGameInfo.gameResult];
     UNV.frame=CGRectMake(0,0,0.7*self.view.frame.size.width,0.7*self.view.frame.size.height);
@@ -128,6 +146,12 @@
         [self setRoomPeopleNumber];
     }];
 }
+- (IBAction)buyGold:(UIButton *)sender {
+    buyGold *bGVC = [[NSBundle mainBundle]loadNibNamed:@"buyGold" owner:nil options:nil].lastObject;
+    bGVC.frame=CGRectMake(0,0,0.7*self.view.frame.size.width,0.7*self.view.frame.size.height);
+    bGVC.center=CGPointMake(self.view.frame.size.width/2,self.view.frame.size.height/2);
+    [self.view addSubview:bGVC];
+}
 -(void)closeTimer
 {
     [searchTimer invalidate];
@@ -136,6 +160,11 @@
 -(void)viewWillDisappear:(BOOL)animated
 {
     [self closeTimer];
+}
+
+-(void)beginTimer
+{
+    searchTimer=[NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(CheckUSerGameInfo) userInfo:nil repeats:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

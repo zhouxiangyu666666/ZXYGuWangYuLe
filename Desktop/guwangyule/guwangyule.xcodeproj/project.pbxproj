@@ -37,6 +37,7 @@
 		3F5E21C91F6F784B001C3CE5 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E21C81F6F784B001C3CE5 /* AddViewController.m */; };
 		3F5E21CD1F6FE9D4001C3CE5 /* RoomInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E21CC1F6FE9D4001C3CE5 /* RoomInfo.m */; };
 		3F62EBBE1F668B29005AF498 /* StakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F62EBBD1F668B29005AF498 /* StakeViewController.m */; };
+		3F6BD9B81F73C30800455EF4 /* SearchUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6BD9B71F73C30800455EF4 /* SearchUserInfo.m */; };
 		3FAA543A1F717194006D76B0 /* userNoticeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA54391F717194006D76B0 /* userNoticeView.m */; };
 		3FAA543C1F7171A2006D76B0 /* userNoticeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FAA543B1F7171A2006D76B0 /* userNoticeView.xib */; };
 		3FAA543E1F7172C2006D76B0 /* ownerNoticeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FAA543D1F7172C2006D76B0 /* ownerNoticeView.xib */; };
@@ -120,6 +121,8 @@
 		3F5E21CC1F6FE9D4001C3CE5 /* RoomInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomInfo.m; sourceTree = "<group>"; };
 		3F62EBBC1F668B29005AF498 /* StakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StakeViewController.h; sourceTree = "<group>"; };
 		3F62EBBD1F668B29005AF498 /* StakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StakeViewController.m; sourceTree = "<group>"; };
+		3F6BD9B61F73C30800455EF4 /* SearchUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchUserInfo.h; sourceTree = "<group>"; };
+		3F6BD9B71F73C30800455EF4 /* SearchUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchUserInfo.m; sourceTree = "<group>"; };
 		3FAA54381F717194006D76B0 /* userNoticeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userNoticeView.h; sourceTree = "<group>"; };
 		3FAA54391F717194006D76B0 /* userNoticeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = userNoticeView.m; sourceTree = "<group>"; };
 		3FAA543B1F7171A2006D76B0 /* userNoticeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = userNoticeView.xib; sourceTree = "<group>"; };
@@ -246,6 +249,8 @@
 				3F45F9161F7129460039BE0C /* OwnerGameInfo.m */,
 				3F45F9181F7129560039BE0C /* UserGameInfo.h */,
 				3F45F9191F7129560039BE0C /* UserGameInfo.m */,
+				3F6BD9B61F73C30800455EF4 /* SearchUserInfo.h */,
+				3F6BD9B71F73C30800455EF4 /* SearchUserInfo.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -536,6 +541,7 @@
 				3F4D1E3E1F5E7EAE003F2ABA /* createRoom.m in Sources */,
 				3F46EA8F1F57A34A006BF59A /* AppDelegate.m in Sources */,
 				3F46EA8C1F57A34A006BF59A /* main.m in Sources */,
+				3F6BD9B81F73C30800455EF4 /* SearchUserInfo.m in Sources */,
 				3F5E21C61F6F7333001C3CE5 /* AddRoomInfo.m in Sources */,
 				3FAA54411F7172D7006D76B0 /* ownerNoticeView.m in Sources */,
 				3F4D1E481F5E7F4B003F2ABA /* quitGame.m in Sources */,

@@ -22,7 +22,9 @@
 @property (strong, nonatomic) IBOutlet UILabel *peopleNumber;
 @property (strong, nonatomic) IBOutlet UIImageView *RoomHostHeader;
 @property (strong, nonatomic) IBOutlet UILabel *RoomHostName;
+
 @property (strong, nonatomic) IBOutlet UILabel *RoomHostID;
+
 @property (strong, nonatomic) IBOutlet UILabel *stakeNumber;
 @property (strong, nonatomic) IBOutlet UIButton *startButton;
 
@@ -94,7 +96,7 @@
     _diceImageView.hidden=NO;
     NSMutableArray *images = [[NSMutableArray alloc]initWithCapacity:6];//因为这个动态图片是由6张图片组成所有把图片放到一个数组中
     for (int i=0; i<6; i++) {
-        NSString *imageName = [NSString stringWithFormat:@"%d",i+1];//for循环依次把图片取出 这里我的图片名为1 － %d为i的值
+        NSString *imageName = [NSString stringWithFormat:@"%d",i+101];//for循环依次把图片取出 这里我的图片名为1 － %d为i的值
         UIImage *image = [UIImage imageNamed:imageName];
         [images addObject:image];
     }

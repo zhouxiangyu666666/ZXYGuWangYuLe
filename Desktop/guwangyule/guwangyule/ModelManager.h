@@ -13,6 +13,7 @@
 #import "RoomInfo.h"
 #import "OwnerGameInfo.h"
 #import "UserGameInfo.h"
+#import "SearchUserInfo.h"
 @interface ModelManager : NSObject
 @property(nonatomic,strong)CreateRoomInfo *createRoomInfoModel;
 @property(nonatomic,strong)LoginInfo *loginInfoModel;
@@ -20,6 +21,7 @@
 @property(nonatomic,strong)RoomInfo *roomInfo;
 @property(nonatomic,strong)OwnerGameInfo *ownerGameInfo;
 @property(nonatomic,strong)UserGameInfo *userGameInfo;
+@property(nonatomic,strong)SearchUserInfo *searchUserInfo;
 @property(nonatomic,assign)int gameTimes;
 +(ModelManager*)shareInterface;
 @end

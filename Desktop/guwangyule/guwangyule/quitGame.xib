@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -26,30 +25,44 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ND-6Y-fhh">
-                    <rect key="frame" x="120" y="245" width="111" height="46"/>
-                    <state key="normal" image="qd"/>
+                    <rect key="frame" x="197" y="245" width="111" height="37"/>
+                    <state key="normal" image="组2-1"/>
                     <connections>
-                        <action selector="certain:" destination="iN0-l3-epB" eventType="touchUpInside" id="xkr-Vm-oOP"/>
+                        <action selector="cancel:" destination="iN0-l3-epB" eventType="touchUpInside" id="6Yk-CL-Htr"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQf-hF-4Pi">
-                    <rect key="frame" x="436" y="245" width="111" height="46"/>
-                    <state key="normal" image="qx"/>
+                    <rect key="frame" x="366" y="245" width="111" height="37"/>
+                    <state key="normal" image="组8"/>
                     <connections>
-                        <action selector="cancel:" destination="iN0-l3-epB" eventType="touchUpInside" id="P8T-Gu-lJy"/>
+                        <action selector="certain:" destination="iN0-l3-epB" eventType="touchUpInside" id="zlA-4r-7qh"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="提示" translatesAutoresizingMaskIntoConstraints="NO" id="XeL-LS-WMy">
+                    <rect key="frame" x="312" y="19" width="42" height="21"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JaN-3D-ObE">
+                    <rect key="frame" x="308" y="209" width="50" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="7gg-cw-qvE"/>
+                        <constraint firstAttribute="width" constant="50" id="dmb-Et-avO"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="w4q-Ea-Ut4" firstAttribute="top" secondItem="XeL-LS-WMy" secondAttribute="bottom" constant="-40" id="4N2-Gq-l7v"/>
                 <constraint firstItem="z8c-vq-PDy" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="5PH-Ea-fnR"/>
-                <constraint firstItem="8ND-6Y-fhh" firstAttribute="leading" secondItem="w4q-Ea-Ut4" secondAttribute="trailing" multiplier="120/667" id="DLm-2j-Pkh"/>
                 <constraint firstItem="w4q-Ea-Ut4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FBw-BN-sru"/>
-                <constraint firstItem="8ND-6Y-fhh" firstAttribute="top" secondItem="w4q-Ea-Ut4" secondAttribute="bottom" multiplier="245/375" id="UZn-Dt-C7r"/>
+                <constraint firstItem="JaN-3D-ObE" firstAttribute="leading" secondItem="8ND-6Y-fhh" secondAttribute="trailing" id="Gky-bO-Zrk"/>
                 <constraint firstAttribute="bottom" secondItem="w4q-Ea-Ut4" secondAttribute="bottom" id="Xh0-aO-iPn"/>
+                <constraint firstItem="8ND-6Y-fhh" firstAttribute="top" secondItem="z8c-vq-PDy" secondAttribute="bottom" constant="43.5" id="c45-Je-8RM"/>
                 <constraint firstItem="z8c-vq-PDy" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="f1t-v2-yCF"/>
-                <constraint firstItem="OQf-hF-4Pi" firstAttribute="trailing" secondItem="w4q-Ea-Ut4" secondAttribute="trailing" multiplier="547/667" id="pkE-Fs-iFs"/>
+                <constraint firstItem="JaN-3D-ObE" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gTI-b5-2ru"/>
+                <constraint firstItem="OQf-hF-4Pi" firstAttribute="leading" secondItem="JaN-3D-ObE" secondAttribute="trailing" constant="8" symbolic="YES" id="qIV-Ho-S5c"/>
                 <constraint firstItem="OQf-hF-4Pi" firstAttribute="top" secondItem="8ND-6Y-fhh" secondAttribute="top" id="s0B-Wj-vBD"/>
+                <constraint firstItem="JaN-3D-ObE" firstAttribute="top" secondItem="w4q-Ea-Ut4" secondAttribute="bottom" constant="-166" id="waa-Kt-c7d"/>
+                <constraint firstItem="XeL-LS-WMy" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="wv6-03-fyT"/>
                 <constraint firstAttribute="trailing" secondItem="w4q-Ea-Ut4" secondAttribute="trailing" id="ydb-cn-MqK"/>
                 <constraint firstItem="w4q-Ea-Ut4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ypv-ql-tmK"/>
             </constraints>
@@ -62,8 +75,9 @@
         </view>
     </objects>
     <resources>
-        <image name="qd" width="111" height="46"/>
-        <image name="qx" width="111" height="46"/>
-        <image name="ts" width="425" height="251"/>
+        <image name="ts" width="425" height="274"/>
+        <image name="提示" width="42" height="21"/>
+        <image name="组2-1" width="111" height="37"/>
+        <image name="组8" width="111" height="37"/>
     </resources>
 </document>

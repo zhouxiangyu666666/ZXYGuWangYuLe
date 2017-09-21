@@ -25,29 +25,34 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeO-lX-G2G">
-                    <rect key="frame" x="265" y="275" width="137" height="45"/>
-                    <state key="normal" image="wzdl"/>
+                    <rect key="frame" x="278" y="226" width="111" height="37"/>
+                    <state key="normal" image="iknow"/>
                     <connections>
                         <action selector="IKnow:" destination="iN0-l3-epB" eventType="touchUpInside" id="mS6-LY-s8e"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您的亏盈情况：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFK-1m-Hkz">
-                    <rect key="frame" x="227" y="193" width="212.5" height="36"/>
+                    <rect key="frame" x="227" y="170" width="212.5" height="36"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="提示" translatesAutoresizingMaskIntoConstraints="NO" id="wyg-7m-IkW">
+                    <rect key="frame" x="312" y="9" width="42" height="21"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="ig9-VQ-SKJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="3KV-er-WzJ"/>
+                <constraint firstItem="BeO-lX-G2G" firstAttribute="top" secondItem="MFK-1m-Hkz" secondAttribute="bottom" constant="20" id="5KD-vA-fgg"/>
                 <constraint firstItem="MFK-1m-Hkz" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="9qU-dI-OkM"/>
-                <constraint firstItem="MFK-1m-Hkz" firstAttribute="top" secondItem="UTQ-Bb-P6Z" secondAttribute="bottom" constant="-182" id="Bc0-rr-kVz"/>
                 <constraint firstAttribute="trailing" secondItem="UTQ-Bb-P6Z" secondAttribute="trailing" id="Ej5-PY-6jC"/>
-                <constraint firstItem="BeO-lX-G2G" firstAttribute="top" secondItem="UTQ-Bb-P6Z" secondAttribute="bottom" constant="-100" id="b5h-v5-ZCa"/>
+                <constraint firstItem="wyg-7m-IkW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="QdH-JT-uQP"/>
                 <constraint firstItem="UTQ-Bb-P6Z" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dJN-Q8-SIk"/>
                 <constraint firstItem="BeO-lX-G2G" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ecG-NM-iN6"/>
+                <constraint firstItem="UTQ-Bb-P6Z" firstAttribute="top" secondItem="wyg-7m-IkW" secondAttribute="bottom" constant="-30" id="huk-AJ-S79"/>
                 <constraint firstItem="UTQ-Bb-P6Z" firstAttribute="top" secondItem="ig9-VQ-SKJ" secondAttribute="bottom" constant="-150" id="l8v-oz-RFO"/>
+                <constraint firstItem="MFK-1m-Hkz" firstAttribute="top" secondItem="ig9-VQ-SKJ" secondAttribute="bottom" constant="20" id="nP7-C8-fKf"/>
                 <constraint firstItem="UTQ-Bb-P6Z" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="q2N-Yt-3dS"/>
                 <constraint firstAttribute="bottom" secondItem="UTQ-Bb-P6Z" secondAttribute="bottom" id="rnC-QD-hLk"/>
             </constraints>
@@ -59,7 +64,8 @@
         </view>
     </objects>
     <resources>
-        <image name="ts" width="425" height="251"/>
-        <image name="wzdl" width="137" height="45"/>
+        <image name="iknow" width="111" height="37"/>
+        <image name="ts" width="425" height="274"/>
+        <image name="提示" width="42" height="21"/>
     </resources>
 </document>
