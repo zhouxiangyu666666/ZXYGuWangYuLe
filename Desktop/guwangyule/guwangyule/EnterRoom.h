@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface EnterRoom : UIView
+@property (strong, nonatomic) IBOutlet UITextField *roomNumber;
 
 @end

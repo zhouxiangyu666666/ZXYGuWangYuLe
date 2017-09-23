@@ -9,6 +9,12 @@
 #import "quitGame.h"
 
 @implementation quitGame
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    self.layer.backgroundColor=[UIColor clearColor].CGColor;
+    
+}
+
 - (IBAction)certain:(UIButton *)sender {
     [[NSNotificationCenter defaultCenter]postNotificationName:@"quitGame" object:nil];
     [self removeFromSuperview];

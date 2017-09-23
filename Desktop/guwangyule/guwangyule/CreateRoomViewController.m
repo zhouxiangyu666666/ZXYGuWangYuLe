@@ -7,14 +7,14 @@
 //
 
 #import "CreateRoomViewController.h"
-#import "buyGold.h"
+#import "NoticeView.h"
 #import "ModelManager.h"
-#import <UIImageView+WebCache.h>
 #import "DownLoadManager.h"
 #import "ApiManager.h"
 #import "OwnerGameInfo.h"
-#import "MBProgressHUD.h"
 #import "ownerNoticeView.h"
+#import <UIImageView+WebCache.h>
+#import "dismissRoom.h"
 @interface CreateRoomViewController ()
 @property (strong, nonatomic) IBOutlet UIImageView *diceImageView;
 @property (strong, nonatomic) IBOutlet UILabel *roomNumber;
@@ -34,58 +34,60 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [ModelManager shareInterface].gameTimes=1;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(certainDismissRoom) name:@"dismissRoom" object:nil];
+    [ModelManager shareInterface].ownerGameInfo= [[OwnerGameInfo alloc]init];
+    searchTimer=[NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(CheckOwnerGameInfo) userInfo:nil repeats:YES];
+    
     _diceImageView.hidden=YES;
     _roomNumber.text=[NSString stringWithFormat:@"房间号:%@",[ModelManager shareInterface].createRoomInfoModel.roomId];
-    _stakeNumber.text=[NSString stringWithFormat:@"%@",[ModelManager shareInterface].createRoomInfoModel.goldCount];
+    
+    NSString *headerGold = [NSString stringWithFormat:@"%@",[ModelManager shareInterface].createRoomInfoModel.goldCount];
+    
+    if (headerGold.length>9) {
+        _stakeNumber.text=[NSString stringWithFormat:@"%@...",[headerGold substringToIndex:9]];
+    }
+    else{
+        _stakeNumber.text=headerGold;
+    }
+    
     _RoomHostName.text=[NSString stringWithFormat:@"%@",[ModelManager shareInterface].createRoomInfoModel.ownerName];
     _RoomHostID.text=[NSString stringWithFormat:@"ID:%@",[ModelManager shareInterface].createRoomInfoModel.ownerId];
     [_RoomHostHeader sd_setImageWithURL:[NSURL URLWithString:[ModelManager shareInterface].createRoomInfoModel.ownerLogo]placeholderImage:[UIImage imageNamed:@"fz"]];
-    [self setGameInfo];
+    _previousDice.hidden=YES;
+    [self changeRoomNumber];
 }
 -(void)setGameInfo
 {
-    if ([ModelManager shareInterface].gameTimes==1) {
-        _peopleNumber.text=[NSString stringWithFormat:@"人数:1/50"];
-    }
-    else{
-    _peopleNumber.text=[NSString stringWithFormat:@"人数:%@/50",[ModelManager shareInterface].createRoomInfoModel.memberCount];
+     _previousDice.hidden=NO;
+    NSLog(@"-----%@",[ModelManager shareInterface].ownerGameInfo.gameTimes);
+    
     _previousDice.text=[NSString stringWithFormat:@"上一期骰点:%@",[ModelManager shareInterface].ownerGameInfo.gameResult];
-    }
+}
+
+-(void)changeRoomNumber{
+    _peopleNumber.text=[NSString stringWithFormat:@"人数:%@",[ModelManager shareInterface].createRoomInfoModel.memberCount];
 }
 
 - (IBAction)dismissRoom:(UIButton *)sender {
-    MBProgressHUD * hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.label.text=@"解散中...";
-    NSString *param = [NSString stringWithFormat:@"userId=%@&roomId=%@",[ModelManager shareInterface].loginInfoModel.userId,[ModelManager shareInterface].createRoomInfoModel.roomId];
-    [[DownLoadManager shareInterface] postddByByUrlPath:dissolveRoom_api andParams:param andHUD:nil andCallBack:^(id obj) {
-        if ([[obj objectForKey:@"code"] isEqualToString:@"0"])  {
-         hud.label.text=@"解散成功";
-            [hud hideAnimated:YES afterDelay:1];
-            [self closeTimer];
-            [self dismissViewControllerAnimated:YES completion:nil];
-        }
-        else{
-            hud.label.text=[obj objectForKey:@"message"];
-            [hud hideAnimated:YES afterDelay:1];
-        }
-    }];
+    dismissRoom *dMVC = [[NSBundle mainBundle]loadNibNamed:@"dismissRoom" owner:nil options:nil].lastObject;
+    [self showViewWithName:dMVC];
+}
+-(void)certainDismissRoom
+{
+    [self closeTimer];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)buyGold:(UIButton *)sender {
-    buyGold *bGVC = [[NSBundle mainBundle]loadNibNamed:@"buyGold" owner:nil options:nil].lastObject;
-    bGVC.frame=CGRectMake(0,0,0.7*self.view.frame.size.width,0.7*self.view.frame.size.height);
-    bGVC.center=CGPointMake(self.view.frame.size.width/2,self.view.frame.size.height/2);
-    [self.view addSubview:bGVC];
+    NoticeView *bGVC = [[NSBundle mainBundle]loadNibNamed:@"NoticeView" owner:nil options:nil].lastObject;
+    bGVC.noticeLabel.text=@"充值金币请联系客服微信:18559576442";
+    [self showViewWithName:bGVC];
 }
 - (IBAction)startGame:(UIButton *)sender {
-    [self closeTimer];
-    NSString *param = [NSString stringWithFormat:@"userId=%@&roomId=%@&gameTimes=%@",[ModelManager shareInterface].loginInfoModel.userId,[ModelManager shareInterface].createRoomInfoModel.roomId,[NSString stringWithFormat:@"%d",[ModelManager shareInterface].gameTimes]];
+    NSString *param = [NSString stringWithFormat:@"userId=%@&roomId=%@&gameTimes=%@",[ModelManager shareInterface].loginInfoModel.userId,[ModelManager shareInterface].createRoomInfoModel.roomId,[NSString stringWithFormat:@"%d",[[ModelManager shareInterface].ownerGameInfo.gameTimes intValue]+1]];
     
     [[DownLoadManager shareInterface] postddByByUrlPath:startGame_api andParams:param andHUD:nil andCallBack:^(id obj) {
         if ([[obj objectForKey:@"code"] isEqualToString:@"0"]) {
         
-        [ModelManager shareInterface].gameTimes++;
-        searchTimer=[NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(CheckOwnerGameInfo) userInfo:nil repeats:YES];
         _startButton.userInteractionEnabled=NO;
             [self startAnimation];
         }
@@ -114,20 +116,23 @@
     _startButton.userInteractionEnabled=YES;
     ownerNoticeView *ONV = [[NSBundle mainBundle]loadNibNamed:@"ownerNoticeView" owner:nil options:nil].lastObject;
     ONV.diceNumber.text=[NSString stringWithFormat:@"骰子点数:%@",[ModelManager shareInterface].ownerGameInfo.gameResult];
-    ONV.frame=CGRectMake(0,0,0.7*self.view.frame.size.width,0.7*self.view.frame.size.height);
-    ONV.center=CGPointMake(self.view.frame.size.width/2,self.view.frame.size.height/2);
-    [self.view addSubview:ONV];
+    [self showViewWithName:ONV];
+    [self setGameInfo];
 }
 -(void)CheckOwnerGameInfo
 {
-    [ModelManager shareInterface].ownerGameInfo= [[OwnerGameInfo alloc]init];
     NSString *param = [NSString stringWithFormat:@"userId=%@&roomId=%@",[ModelManager shareInterface].loginInfoModel.userId,[ModelManager shareInterface].createRoomInfoModel.roomId];
     [[DownLoadManager shareInterface] postddByByUrlPath:GameCheck_api andParams:param andHUD:nil andCallBack:^(id obj) {
         if ([[obj objectForKey:@"code"] isEqualToString:@"0"]) {
     [[ModelManager shareInterface].ownerGameInfo setValuesForKeysWithDictionary:[obj objectForKey:@"result"]];
-    [self setGameInfo];
+    [self changeRoomNumber];
         }
     }];
+}
+-(void)showViewWithName:(UIView *)showView{
+    showView.frame=CGRectMake(0, 0, 0.7*self.view.frame.size.width, 0.7*self.view.frame.size.height);
+    showView.center=CGPointMake(self.view.frame.size.width/2,self.view.frame.size.height/2);
+    [self.view addSubview:showView];
 }
 -(void)closeTimer
 {

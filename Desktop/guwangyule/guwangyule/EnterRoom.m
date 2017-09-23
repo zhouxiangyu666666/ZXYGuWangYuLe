@@ -13,12 +13,18 @@
 #import "ApiManager.h"
 #import "AddRoomInfo.h"
 #import "MBProgressHUD.h"
-@interface EnterRoom()
-@property (strong, nonatomic) IBOutlet UITextField *roomNumber;
+@interface EnterRoom()<UITextFieldDelegate>
+
 
 @end
 @implementation EnterRoom
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    self.roomNumber.delegate=self;
+    [self.roomNumber addTarget:self action:@selector(textFieldDidChange) forControlEvents:UIControlEventEditingChanged];
+    self.layer.backgroundColor=[UIColor clearColor].CGColor;
+}
 - (IBAction)certain:(UIButton *)sender {
     MBProgressHUD * hud = [MBProgressHUD showHUDAddedTo:self.superview animated:YES];
     hud.label.text=@"加入中...";
@@ -41,5 +47,15 @@
 - (IBAction)cancel:(UIButton *)sender {
     [self removeFromSuperview];
 }
-
+-(void)textFieldDidChange
+{
+    if (_roomNumber.text.length==6) {
+        
+        [_roomNumber resignFirstResponder];
+    }
+}
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [textField setText:nil];
+}
 @end

@@ -15,32 +15,29 @@
             <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ts" translatesAutoresizingMaskIntoConstraints="NO" id="w4q-Ea-Ut4">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xts" translatesAutoresizingMaskIntoConstraints="NO" id="w4q-Ea-Ut4">
                     <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="是否关闭游戏" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8c-vq-PDy">
-                    <rect key="frame" x="263.5" y="174" width="140" height="27.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                    <rect key="frame" x="272.5" y="176" width="122.5" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ND-6Y-fhh">
-                    <rect key="frame" x="197" y="245" width="111" height="37"/>
+                    <rect key="frame" x="197" y="243.5" width="111" height="37"/>
                     <state key="normal" image="组2-1"/>
                     <connections>
                         <action selector="cancel:" destination="iN0-l3-epB" eventType="touchUpInside" id="6Yk-CL-Htr"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQf-hF-4Pi">
-                    <rect key="frame" x="366" y="245" width="111" height="37"/>
+                    <rect key="frame" x="366" y="243.5" width="111" height="37"/>
                     <state key="normal" image="组8"/>
                     <connections>
                         <action selector="certain:" destination="iN0-l3-epB" eventType="touchUpInside" id="zlA-4r-7qh"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="提示" translatesAutoresizingMaskIntoConstraints="NO" id="XeL-LS-WMy">
-                    <rect key="frame" x="312" y="19" width="42" height="21"/>
-                </imageView>
                 <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JaN-3D-ObE">
                     <rect key="frame" x="308" y="209" width="50" height="100"/>
                     <constraints>
@@ -51,7 +48,6 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="w4q-Ea-Ut4" firstAttribute="top" secondItem="XeL-LS-WMy" secondAttribute="bottom" constant="-40" id="4N2-Gq-l7v"/>
                 <constraint firstItem="z8c-vq-PDy" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="5PH-Ea-fnR"/>
                 <constraint firstItem="w4q-Ea-Ut4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FBw-BN-sru"/>
                 <constraint firstItem="JaN-3D-ObE" firstAttribute="leading" secondItem="8ND-6Y-fhh" secondAttribute="trailing" id="Gky-bO-Zrk"/>
@@ -62,7 +58,6 @@
                 <constraint firstItem="OQf-hF-4Pi" firstAttribute="leading" secondItem="JaN-3D-ObE" secondAttribute="trailing" constant="8" symbolic="YES" id="qIV-Ho-S5c"/>
                 <constraint firstItem="OQf-hF-4Pi" firstAttribute="top" secondItem="8ND-6Y-fhh" secondAttribute="top" id="s0B-Wj-vBD"/>
                 <constraint firstItem="JaN-3D-ObE" firstAttribute="top" secondItem="w4q-Ea-Ut4" secondAttribute="bottom" constant="-166" id="waa-Kt-c7d"/>
-                <constraint firstItem="XeL-LS-WMy" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="wv6-03-fyT"/>
                 <constraint firstAttribute="trailing" secondItem="w4q-Ea-Ut4" secondAttribute="trailing" id="ydb-cn-MqK"/>
                 <constraint firstItem="w4q-Ea-Ut4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ypv-ql-tmK"/>
             </constraints>
@@ -75,8 +70,7 @@
         </view>
     </objects>
     <resources>
-        <image name="ts" width="425" height="274"/>
-        <image name="提示" width="42" height="21"/>
+        <image name="xts" width="425" height="274"/>
         <image name="组2-1" width="111" height="37"/>
         <image name="组8" width="111" height="37"/>
     </resources>

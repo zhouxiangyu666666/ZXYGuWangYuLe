@@ -16,23 +16,23 @@
             <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ts" translatesAutoresizingMaskIntoConstraints="NO" id="TWQ-JS-P8x">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xts" translatesAutoresizingMaskIntoConstraints="NO" id="TWQ-JS-P8x">
                     <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入房间号:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffs-Uz-HGt">
-                    <rect key="frame" x="260.5" y="100" width="146" height="27.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                    <rect key="frame" x="269.5" y="100" width="128" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KpO-tc-5tZ">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="房间号" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KpO-tc-5tZ">
                     <rect key="frame" x="244" y="150" width="180" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="180" id="e4E-aM-v7K"/>
                     </constraints>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBK-Xv-Fl7">
                     <rect key="frame" x="197.5" y="245" width="111" height="37"/>
@@ -48,9 +48,6 @@
                         <action selector="certain:" destination="iN0-l3-epB" eventType="touchUpInside" id="pP6-wR-4yz"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="提示" translatesAutoresizingMaskIntoConstraints="NO" id="Kux-VL-cFz">
-                    <rect key="frame" x="312.5" y="9" width="42" height="21"/>
-                </imageView>
                 <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0kt-aQ-9fj">
                     <rect key="frame" x="308.5" y="199" width="50" height="100"/>
                     <constraints>
@@ -66,9 +63,7 @@
                 <constraint firstItem="0kt-aQ-9fj" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="7po-bH-1XS"/>
                 <constraint firstItem="RzX-zN-Iev" firstAttribute="top" secondItem="uBK-Xv-Fl7" secondAttribute="top" id="F6t-wJ-pmh"/>
                 <constraint firstAttribute="bottom" secondItem="TWQ-JS-P8x" secondAttribute="bottom" id="J0A-2A-WOT"/>
-                <constraint firstItem="Kux-VL-cFz" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="JbK-6n-tLd"/>
                 <constraint firstItem="TWQ-JS-P8x" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="M9D-18-B6w"/>
-                <constraint firstItem="TWQ-JS-P8x" firstAttribute="top" secondItem="Kux-VL-cFz" secondAttribute="bottom" constant="-30" id="Qb7-TF-lxv"/>
                 <constraint firstItem="RzX-zN-Iev" firstAttribute="leading" secondItem="0kt-aQ-9fj" secondAttribute="trailing" id="W3y-YM-a4I"/>
                 <constraint firstItem="0kt-aQ-9fj" firstAttribute="top" secondItem="TWQ-JS-P8x" secondAttribute="bottom" constant="-176" id="ZgV-7a-HWh"/>
                 <constraint firstItem="uBK-Xv-Fl7" firstAttribute="top" secondItem="KpO-tc-5tZ" secondAttribute="bottom" constant="65" id="cnt-rX-7lz"/>
@@ -84,14 +79,13 @@
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
-                <outlet property="roomNumber" destination="KpO-tc-5tZ" id="L2k-KZ-wzc"/>
+                <outlet property="roomNumber" destination="KpO-tc-5tZ" id="gFt-Tq-iUB"/>
             </connections>
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
     <resources>
-        <image name="ts" width="425" height="274"/>
-        <image name="提示" width="42" height="21"/>
+        <image name="xts" width="425" height="274"/>
         <image name="组2-1" width="111" height="37"/>
         <image name="组8" width="111" height="37"/>
     </resources>

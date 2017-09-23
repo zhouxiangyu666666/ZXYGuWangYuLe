@@ -9,6 +9,10 @@
 #import "ownerNoticeView.h"
 
 @implementation ownerNoticeView
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    self.layer.backgroundColor=[UIColor clearColor].CGColor;    
+}
 
 - (IBAction)IKnow:(UIButton *)sender {
     [self removeFromSuperview];

@@ -14,6 +14,11 @@
 #import "MBProgressHUD.h"
 @implementation createRoom
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    self.layer.backgroundColor=[UIColor clearColor].CGColor;
+}
+
 - (IBAction)cancel:(UIButton *)sender {
     [self removeFromSuperview];
 }

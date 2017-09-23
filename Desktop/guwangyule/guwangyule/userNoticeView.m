@@ -9,6 +9,11 @@
 #import "userNoticeView.h"
 
 @implementation userNoticeView
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    self.layer.backgroundColor=[UIColor clearColor].CGColor;
+    
+}
 - (IBAction)IKnow:(UIButton *)sender {
     [self removeFromSuperview];
 }

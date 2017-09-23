@@ -15,12 +15,12 @@
             <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ts" translatesAutoresizingMaskIntoConstraints="NO" id="gg0-rQ-ega">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xts" translatesAutoresizingMaskIntoConstraints="NO" id="gg0-rQ-ega">
                     <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="骰子点数：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxM-1t-7Q8">
-                    <rect key="frame" x="257.5" y="122" width="152" height="36"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <rect key="frame" x="283" y="134" width="102" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -31,14 +31,10 @@
                         <action selector="IKnow:" destination="iN0-l3-epB" eventType="touchUpInside" id="8UM-h1-BmP"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="提示" translatesAutoresizingMaskIntoConstraints="NO" id="ka9-B7-cXZ">
-                    <rect key="frame" x="312" y="9" width="42" height="21"/>
-                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="gg0-rQ-ega" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0sf-Km-g5t"/>
-                <constraint firstItem="gg0-rQ-ega" firstAttribute="top" secondItem="ka9-B7-cXZ" secondAttribute="bottom" constant="-30" id="RDO-bF-MDJ"/>
                 <constraint firstItem="H4U-mH-bIs" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="TtS-m7-gRG"/>
                 <constraint firstItem="H4U-mH-bIs" firstAttribute="top" secondItem="jxM-1t-7Q8" secondAttribute="bottom" constant="50" id="d6w-eC-dap"/>
                 <constraint firstItem="gg0-rQ-ega" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gFC-7g-s30"/>
@@ -46,7 +42,6 @@
                 <constraint firstItem="jxM-1t-7Q8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="rvK-LS-Rh7"/>
                 <constraint firstItem="gg0-rQ-ega" firstAttribute="top" secondItem="jxM-1t-7Q8" secondAttribute="bottom" constant="-158" id="sci-ux-6KC"/>
                 <constraint firstAttribute="bottom" secondItem="gg0-rQ-ega" secondAttribute="bottom" id="xiI-Si-mGk"/>
-                <constraint firstItem="ka9-B7-cXZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="z7j-bL-uCR"/>
             </constraints>
             <connections>
                 <outlet property="diceNumber" destination="jxM-1t-7Q8" id="JUd-fG-f9K"/>
@@ -56,7 +51,6 @@
     </objects>
     <resources>
         <image name="iknow" width="111" height="37"/>
-        <image name="ts" width="425" height="274"/>
-        <image name="提示" width="42" height="21"/>
+        <image name="xts" width="425" height="274"/>
     </resources>
 </document>
