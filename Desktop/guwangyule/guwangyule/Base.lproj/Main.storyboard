@@ -507,7 +507,6 @@
                         <outlet property="previousDice" destination="1xM-oW-FGj" id="B8g-ZJ-ICi"/>
                         <outlet property="roomNumber" destination="zM4-9r-sNj" id="Fh8-aj-hXF"/>
                         <outlet property="stakeNumber" destination="7un-4M-Nda" id="OvS-Lv-1JQ"/>
-                        <outlet property="startButton" destination="n3w-zl-Zl5" id="0Zn-Bs-Grn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QqX-sT-CR0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -706,7 +705,6 @@
                         <outlet property="peopleNumber" destination="OS0-KJ-mjJ" id="34m-zN-N2j"/>
                         <outlet property="previousDiceLabel" destination="CtT-XB-jhz" id="ezh-BW-9CS"/>
                         <outlet property="roomIdLabel" destination="RW2-1B-bJg" id="eYD-SA-ZBL"/>
-                        <outlet property="stakeBuuton" destination="xx5-p3-WH6" id="Dep-zz-d1Q"/>
                         <outlet property="userId" destination="jJT-ho-S32" id="P6h-ob-ge6"/>
                         <outlet property="userLogo" destination="mQO-1A-zJd" id="Cgk-zq-fJR"/>
                         <outlet property="userName" destination="v21-LI-UVM" id="UDn-EP-z3v"/>

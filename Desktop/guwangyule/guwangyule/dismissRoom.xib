@@ -16,7 +16,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xts" translatesAutoresizingMaskIntoConstraints="NO" id="vsy-vG-M1Y">
-                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                    <rect key="frame" x="121" y="50.5" width="425" height="274"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mhb-5e-ePy">
                     <rect key="frame" x="197.5" y="239.5" width="111" height="37"/>
@@ -54,16 +54,14 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="vsy-vG-M1Y" secondAttribute="trailing" id="5lZ-IE-896"/>
                 <constraint firstItem="yCr-j1-Id9" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="87L-Uv-f06"/>
-                <constraint firstAttribute="bottom" secondItem="vsy-vG-M1Y" secondAttribute="bottom" id="AtV-QP-jLu"/>
+                <constraint firstItem="vsy-vG-M1Y" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="II9-F1-p6K"/>
                 <constraint firstItem="Mhb-5e-ePy" firstAttribute="top" secondItem="yCr-j1-Id9" secondAttribute="bottom" constant="40" id="JqG-Fo-UwW"/>
                 <constraint firstItem="vaF-B0-cZZ" firstAttribute="centerY" secondItem="GtJ-wp-FmP" secondAttribute="centerY" id="Tmo-pq-qiU"/>
                 <constraint firstItem="GtJ-wp-FmP" firstAttribute="top" secondItem="Mhb-5e-ePy" secondAttribute="top" id="VPv-R4-8fh"/>
                 <constraint firstItem="yCr-j1-Id9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="esr-OL-MT2"/>
                 <constraint firstItem="vaF-B0-cZZ" firstAttribute="leading" secondItem="Mhb-5e-ePy" secondAttribute="trailing" id="gvw-ko-dAc"/>
-                <constraint firstItem="vsy-vG-M1Y" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hbk-3H-EKc"/>
-                <constraint firstItem="vsy-vG-M1Y" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="iel-dZ-Tx2"/>
+                <constraint firstItem="vsy-vG-M1Y" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jJ1-1K-DaH"/>
                 <constraint firstItem="GtJ-wp-FmP" firstAttribute="leading" secondItem="vaF-B0-cZZ" secondAttribute="trailing" id="spR-13-oki"/>
                 <constraint firstItem="vaF-B0-cZZ" firstAttribute="centerY" secondItem="Mhb-5e-ePy" secondAttribute="centerY" id="uwy-vK-f4O"/>
                 <constraint firstItem="vaF-B0-cZZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vDp-hv-nbP"/>

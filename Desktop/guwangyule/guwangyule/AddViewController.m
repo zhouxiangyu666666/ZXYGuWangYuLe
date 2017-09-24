@@ -33,15 +33,13 @@
 @property (strong, nonatomic) IBOutlet UILabel *GoldLabel;
 @property (strong, nonatomic) IBOutlet UILabel *peopleNumber;
 
-@property (strong, nonatomic) IBOutlet UIButton *stakeBuuton;
-
 @end
 
 @implementation AddViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //_diceImageView.hidden=YES;
+    _diceImageView.hidden=YES;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(beginTimer:) name:@"beginTimer" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(certainQuitRoom) name:@"quitRoom" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showDisRoomView) name:@"dissolveRoom" object:nil];
@@ -148,11 +146,10 @@
 }
 -(void)startAnimation
 {
-    UIView *lastView=[self.view viewWithTag:[ModelManager shareInterface].gameTimes-1000000];
+    UIView *lastView=[self.view viewWithTag:[ModelManager shareInterface].gameTimes+1000000-1];
     if (lastView) {
         [lastView removeFromSuperview];
     }
-    _stakeBuuton.userInteractionEnabled=NO;
     _diceImageView.hidden=NO;
     NSMutableArray *images = [[NSMutableArray alloc]initWithCapacity:6];//因为这个动态图片是由6张图片组成所有把图片放到一个数组中
     for (int i=0; i<6; i++) {
@@ -172,7 +169,6 @@
 -(void)AfterDelay1{
     
     _diceImageView.hidden=YES;
-    _stakeBuuton.userInteractionEnabled=YES;
     userNoticeView *UNV = [[NSBundle mainBundle]loadNibNamed:@"userNoticeView" owner:nil options:nil].lastObject;
     UNV.tag=[ModelManager shareInterface].gameTimes+1000000;
     UNV.resultGain.text=[NSString stringWithFormat:@"您的亏盈情况:%@",[ModelManager shareInterface].userGameInfo.resultGain];
@@ -194,7 +190,7 @@
     [self showViewWithName:bGVC];
 }
 -(void)showViewWithName:(UIView *)showView{
-    showView.frame=CGRectMake(0, 0, 0.7*self.view.frame.size.width, 0.7*self.view.frame.size.height);
+    showView.frame=CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     showView.center=CGPointMake(self.view.frame.size.width/2,self.view.frame.size.height/2);
     [self.view addSubview:showView];
 }
@@ -207,6 +203,7 @@
 -(void)viewWillDisappear:(BOOL)animated
 {
     [self closeTimer];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"beginHorseLamp" object:nil];
 }
 
 -(void)beginTimer:(NSNotification *)noti

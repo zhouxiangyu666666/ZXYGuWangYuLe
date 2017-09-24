@@ -402,7 +402,7 @@
 				TargetAttributes = {
 					3F46EA861F57A34A006BF59A = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 9PE2UB237L;
+						DevelopmentTeam = U4WLZG7747;
 						ProvisioningStyle = Automatic;
 					};
 					3F46EA9F1F57A34A006BF59A = {
@@ -706,11 +706,11 @@
 			baseConfigurationReference = 1A933D15834861B4919284D3 /* Pods-guwangyule.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9PE2UB237L;
+				DEVELOPMENT_TEAM = U4WLZG7747;
 				INFOPLIST_FILE = guwangyule/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zhou.guwangyule;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhouxiangyu.guwangyule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -720,11 +720,11 @@
 			baseConfigurationReference = 674EC8BE3D457853A7DAD9C7 /* Pods-guwangyule.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9PE2UB237L;
+				DEVELOPMENT_TEAM = U4WLZG7747;
 				INFOPLIST_FILE = guwangyule/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zhou.guwangyule;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhouxiangyu.guwangyule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

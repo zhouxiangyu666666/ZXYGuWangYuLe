@@ -64,7 +64,7 @@
     }
 }
 -(void)showViewWithName:(UIView *)showView{
-    showView.frame=CGRectMake(0, 0, 0.7*self.view.frame.size.width, 0.7*self.view.frame.size.height);
+    showView.frame=CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     showView.center=CGPointMake(self.view.frame.size.width/2,self.view.frame.size.height/2);
     [self.view addSubview:showView];
 }

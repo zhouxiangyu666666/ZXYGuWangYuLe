@@ -17,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xts" translatesAutoresizingMaskIntoConstraints="NO" id="Pyf-Um-wBm">
-                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                    <rect key="frame" x="121" y="50.5" width="425" height="274"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="创建房间需花费10个钻石" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Nz-dr-TSm">
                     <rect key="frame" x="221" y="176" width="226" height="24"/>
@@ -26,14 +26,14 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ItP-KW-lAs">
-                    <rect key="frame" x="197.5" y="255" width="111" height="37"/>
+                    <rect key="frame" x="197.5" y="221" width="111" height="37"/>
                     <state key="normal" image="组2-1"/>
                     <connections>
                         <action selector="cancel:" destination="iN0-l3-epB" eventType="touchUpInside" id="htk-UR-iSs"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZ1-Zu-Gr7">
-                    <rect key="frame" x="358.5" y="255" width="111" height="37"/>
+                    <rect key="frame" x="358.5" y="221" width="111" height="37"/>
                     <state key="normal" image="组8"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -45,7 +45,7 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zqu-tP-iWT">
-                    <rect key="frame" x="308.5" y="220" width="50" height="100"/>
+                    <rect key="frame" x="308.5" y="169.5" width="50" height="100"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="100" id="TK3-L0-D7B"/>
@@ -56,17 +56,15 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Zqu-tP-iWT" firstAttribute="top" secondItem="Pyf-Um-wBm" secondAttribute="bottom" constant="-155" id="037-98-Dcf"/>
-                <constraint firstAttribute="bottom" secondItem="Pyf-Um-wBm" secondAttribute="bottom" id="3rg-0D-44g"/>
                 <constraint firstItem="ItP-KW-lAs" firstAttribute="top" secondItem="Pyf-Um-wBm" secondAttribute="bottom" multiplier="255/375" id="71Z-Wf-Wtn"/>
-                <constraint firstItem="Pyf-Um-wBm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="946-gQ-xQn"/>
                 <constraint firstItem="Zqu-tP-iWT" firstAttribute="leading" secondItem="ItP-KW-lAs" secondAttribute="trailing" id="HoJ-5f-eQ8"/>
                 <constraint firstItem="QZ1-Zu-Gr7" firstAttribute="top" secondItem="ItP-KW-lAs" secondAttribute="top" id="IwM-l2-gb7"/>
-                <constraint firstItem="Pyf-Um-wBm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Nmv-6m-Q11"/>
                 <constraint firstItem="5Nz-dr-TSm" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="PMY-F2-krA"/>
+                <constraint firstItem="Pyf-Um-wBm" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="cuW-yG-NfD"/>
                 <constraint firstItem="Zqu-tP-iWT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ng4-mb-bdu"/>
                 <constraint firstItem="5Nz-dr-TSm" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="oR6-bd-iHH"/>
+                <constraint firstItem="Pyf-Um-wBm" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="qXf-JO-xas"/>
                 <constraint firstItem="QZ1-Zu-Gr7" firstAttribute="leading" secondItem="Zqu-tP-iWT" secondAttribute="trailing" id="ung-qw-Sgn"/>
-                <constraint firstAttribute="trailing" secondItem="Pyf-Um-wBm" secondAttribute="trailing" id="wxZ-6x-TtR"/>
             </constraints>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">

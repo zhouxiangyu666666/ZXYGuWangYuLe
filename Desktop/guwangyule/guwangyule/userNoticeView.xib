@@ -16,23 +16,23 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xts" translatesAutoresizingMaskIntoConstraints="NO" id="UTQ-Bb-P6Z">
-                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                    <rect key="frame" x="121" y="50.5" width="425" height="274"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="骰子点数：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ig9-VQ-SKJ">
-                    <rect key="frame" x="283" y="96" width="102" height="24"/>
+                    <rect key="frame" x="283" y="146.5" width="102" height="24"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeO-lX-G2G">
-                    <rect key="frame" x="278" y="184" width="111" height="37"/>
+                    <rect key="frame" x="278" y="234.5" width="111" height="37"/>
                     <state key="normal" image="iknow"/>
                     <connections>
                         <action selector="IKnow:" destination="iN0-l3-epB" eventType="touchUpInside" id="mS6-LY-s8e"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您的亏盈情况：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFK-1m-Hkz">
-                    <rect key="frame" x="262.5" y="140" width="143" height="24"/>
+                    <rect key="frame" x="262.5" y="190.5" width="143" height="24"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -43,13 +43,11 @@
                 <constraint firstItem="ig9-VQ-SKJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="3KV-er-WzJ"/>
                 <constraint firstItem="BeO-lX-G2G" firstAttribute="top" secondItem="MFK-1m-Hkz" secondAttribute="bottom" constant="20" id="5KD-vA-fgg"/>
                 <constraint firstItem="MFK-1m-Hkz" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="9qU-dI-OkM"/>
-                <constraint firstAttribute="trailing" secondItem="UTQ-Bb-P6Z" secondAttribute="trailing" id="Ej5-PY-6jC"/>
-                <constraint firstItem="UTQ-Bb-P6Z" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dJN-Q8-SIk"/>
+                <constraint firstItem="UTQ-Bb-P6Z" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Cuu-tP-AyP"/>
                 <constraint firstItem="BeO-lX-G2G" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ecG-NM-iN6"/>
                 <constraint firstItem="UTQ-Bb-P6Z" firstAttribute="top" secondItem="ig9-VQ-SKJ" secondAttribute="bottom" constant="-120" id="l8v-oz-RFO"/>
                 <constraint firstItem="MFK-1m-Hkz" firstAttribute="top" secondItem="ig9-VQ-SKJ" secondAttribute="bottom" constant="20" id="nP7-C8-fKf"/>
-                <constraint firstItem="UTQ-Bb-P6Z" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="q2N-Yt-3dS"/>
-                <constraint firstAttribute="bottom" secondItem="UTQ-Bb-P6Z" secondAttribute="bottom" id="rnC-QD-hLk"/>
+                <constraint firstItem="UTQ-Bb-P6Z" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="wbE-hG-X6y"/>
             </constraints>
             <connections>
                 <outlet property="diceNumber" destination="ig9-VQ-SKJ" id="ILb-TZ-kC2"/>

@@ -67,6 +67,11 @@
     }
     [_headerImageView sd_setImageWithURL:[NSURL URLWithString:[ModelManager shareInterface].loginInfoModel.userLogo] placeholderImage:[UIImage imageNamed:@"toux"]];
 }
+-(void)beginHorseLamp
+{
+    [self anmationForNoticeLabel];
+    [self anmationForLight];
+}
 -(void)anmationForNoticeLabel{
     self.horseLamp.clipsToBounds=YES;
     [self.horseLamp addSubview:self.noticeLabel];
@@ -124,7 +129,7 @@
     [self showViewWithName:eRVC];
 }
 -(void)showViewWithName:(UIView *)showView{
-    showView.frame=CGRectMake(0, 0, 0.7*self.view.frame.size.width, 0.7*self.view.frame.size.height);
+    showView.frame=CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     showView.center=CGPointMake(self.view.frame.size.width/2,self.view.frame.size.height/2);
     [self.view addSubview:showView];
 }

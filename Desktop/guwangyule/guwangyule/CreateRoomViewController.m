@@ -26,7 +26,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *RoomHostID;
 
 @property (strong, nonatomic) IBOutlet UILabel *stakeNumber;
-@property (strong, nonatomic) IBOutlet UIButton *startButton;
 
 @end
 
@@ -88,7 +87,6 @@
     [[DownLoadManager shareInterface] postddByByUrlPath:startGame_api andParams:param andHUD:nil andCallBack:^(id obj) {
         if ([[obj objectForKey:@"code"] isEqualToString:@"0"]) {
         
-        _startButton.userInteractionEnabled=NO;
             [self startAnimation];
         }
     }];
@@ -113,7 +111,6 @@
 }
 -(void)AfterDelay{
     _diceImageView.hidden=YES;
-    _startButton.userInteractionEnabled=YES;
     ownerNoticeView *ONV = [[NSBundle mainBundle]loadNibNamed:@"ownerNoticeView" owner:nil options:nil].lastObject;
     ONV.diceNumber.text=[NSString stringWithFormat:@"骰子点数:%@",[ModelManager shareInterface].ownerGameInfo.gameResult];
     [self showViewWithName:ONV];
@@ -130,7 +127,7 @@
     }];
 }
 -(void)showViewWithName:(UIView *)showView{
-    showView.frame=CGRectMake(0, 0, 0.7*self.view.frame.size.width, 0.7*self.view.frame.size.height);
+    showView.frame=CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     showView.center=CGPointMake(self.view.frame.size.width/2,self.view.frame.size.height/2);
     [self.view addSubview:showView];
 }
@@ -142,6 +139,7 @@
 -(void)viewWillDisappear:(BOOL)animated
 {
     [self closeTimer];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"beginHorseLamp" object:nil];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -16,7 +16,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xts" translatesAutoresizingMaskIntoConstraints="NO" id="80t-TT-uTy">
-                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                    <rect key="frame" x="121" y="50.5" width="425" height="274"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEM-Mi-A7B">
                     <rect key="frame" x="309" y="175.5" width="49" height="24"/>
@@ -34,14 +34,12 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="80t-TT-uTy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Bip-VQ-59W"/>
-                <constraint firstAttribute="bottom" secondItem="80t-TT-uTy" secondAttribute="bottom" id="EPj-mF-47g"/>
                 <constraint firstItem="oEM-Mi-A7B" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="EgF-Zd-xJ9"/>
+                <constraint firstItem="80t-TT-uTy" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="IiJ-WT-H4k"/>
                 <constraint firstItem="BrT-xa-tgy" firstAttribute="top" secondItem="oEM-Mi-A7B" secondAttribute="bottom" constant="27.5" id="J9T-o8-Cvu"/>
                 <constraint firstItem="oEM-Mi-A7B" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="T14-o9-qkY"/>
-                <constraint firstItem="80t-TT-uTy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="WU5-V9-Mxh"/>
                 <constraint firstItem="BrT-xa-tgy" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dC3-KP-uVw"/>
-                <constraint firstAttribute="trailing" secondItem="80t-TT-uTy" secondAttribute="trailing" id="lTm-dm-3qa"/>
+                <constraint firstItem="80t-TT-uTy" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="rOi-vB-kdL"/>
             </constraints>
             <connections>
                 <outlet property="noticeLabel" destination="oEM-Mi-A7B" id="Y3H-YU-CKU"/>

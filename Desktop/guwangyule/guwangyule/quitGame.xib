@@ -16,7 +16,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xts" translatesAutoresizingMaskIntoConstraints="NO" id="w4q-Ea-Ut4">
-                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                    <rect key="frame" x="121" y="50.5" width="425" height="274"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="是否关闭游戏" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8c-vq-PDy">
                     <rect key="frame" x="272.5" y="176" width="122.5" height="24"/>
@@ -39,7 +39,7 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JaN-3D-ObE">
-                    <rect key="frame" x="308" y="209" width="50" height="100"/>
+                    <rect key="frame" x="308" y="158.5" width="50" height="100"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="100" id="7gg-cw-qvE"/>
                         <constraint firstAttribute="width" constant="50" id="dmb-Et-avO"/>
@@ -49,17 +49,15 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="z8c-vq-PDy" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="5PH-Ea-fnR"/>
-                <constraint firstItem="w4q-Ea-Ut4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FBw-BN-sru"/>
+                <constraint firstItem="w4q-Ea-Ut4" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="EUN-O9-vj1"/>
                 <constraint firstItem="JaN-3D-ObE" firstAttribute="leading" secondItem="8ND-6Y-fhh" secondAttribute="trailing" id="Gky-bO-Zrk"/>
-                <constraint firstAttribute="bottom" secondItem="w4q-Ea-Ut4" secondAttribute="bottom" id="Xh0-aO-iPn"/>
+                <constraint firstItem="w4q-Ea-Ut4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="LXI-iM-qMF"/>
                 <constraint firstItem="8ND-6Y-fhh" firstAttribute="top" secondItem="z8c-vq-PDy" secondAttribute="bottom" constant="43.5" id="c45-Je-8RM"/>
                 <constraint firstItem="z8c-vq-PDy" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="f1t-v2-yCF"/>
                 <constraint firstItem="JaN-3D-ObE" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gTI-b5-2ru"/>
                 <constraint firstItem="OQf-hF-4Pi" firstAttribute="leading" secondItem="JaN-3D-ObE" secondAttribute="trailing" constant="8" symbolic="YES" id="qIV-Ho-S5c"/>
                 <constraint firstItem="OQf-hF-4Pi" firstAttribute="top" secondItem="8ND-6Y-fhh" secondAttribute="top" id="s0B-Wj-vBD"/>
                 <constraint firstItem="JaN-3D-ObE" firstAttribute="top" secondItem="w4q-Ea-Ut4" secondAttribute="bottom" constant="-166" id="waa-Kt-c7d"/>
-                <constraint firstAttribute="trailing" secondItem="w4q-Ea-Ut4" secondAttribute="trailing" id="ydb-cn-MqK"/>
-                <constraint firstItem="w4q-Ea-Ut4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ypv-ql-tmK"/>
             </constraints>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
